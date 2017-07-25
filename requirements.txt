@@ -1,0 +1,15 @@
+django
+django-compressor
+django-extensions
+django-grappelli
+django-libsass
+django-model-utils
+django-redis
+psycopg2
+redis
+elasticsearch>=5.0.0,<6.0.0
+
+
+django-activecollab-digger
+django-kdl-ldap
+wagtail
