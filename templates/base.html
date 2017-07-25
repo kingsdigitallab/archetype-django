@@ -4,14 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{% block meta_title %}{% endblock %} | PREOJECT_TITLE</title>
+  <title>{% block meta_title %}{% endblock %} | Archetype</title>
   <meta name="author" content="King's Digital Lab">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   {% compress css %}
-  <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}">
   {% endcompress %}
+  
+  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+  
 </head>
 <body>
   <header>
@@ -24,30 +27,31 @@
 
   <main>
     {% block title %}{% endblock %}
+    
     {% block main %}
     {% endblock %}
   </main>
 
   <footer>
     {% block footer %}
-    {% include 'includes/footer.html' %}
+        {% include 'includes/footer.html' %}
     {% endblock %}
   </footer>
 
   {% compress js %}
-  <script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
-
-  <script src="{% static 'assets/js/main.js' %}"></script>
+      <script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
+    
+      <script src="{% static 'assets/js/main.js' %}"></script>
   {% endcompress %}
 
   {% block footer_scripts %}{% endblock %}
 
   {% compress js %}
-  <script src="{% static 'assets/js/google_analytics.js' %}"></script>
-  <script>
-    ga('create', '{{ GA_ID }}', 'auto');
-    ga('send', 'pageview');
-  </script>
+      <script src="{% static 'assets/js/google_analytics.js' %}"></script>
+      <script>
+        ga('create', '{{ GA_ID }}', 'auto');
+        ga('send', 'pageview');
+      </script>
   {% endcompress %}
 </body>
 </html>
