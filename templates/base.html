@@ -1,17 +1,24 @@
 {% load staticfiles compress  %}
 <!DOCTYPE html>
 <html>
-<head>
+<head class=" js " lang="en">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{% block meta_title %}{% endblock %} | Archetype</title>
   <meta name="author" content="King's Digital Lab">
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="{% static "tmp/base.css" %}">
+  <link rel="stylesheet" href="{% static "tmp/main.css" %}">
+  <link rel="stylesheet" href="{% static "tmp/vendor.css" %}">
+  <link rel="stylesheet" href="{% static "tmp/font-awesome.min.css" %}">
 
   {% compress css %}
-    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}">
+    <!-- link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}" -->
   {% endcompress %}
+  
+  <script src="{% static "tmp/modernizr.js" %}"></script>
   
   <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
   
@@ -40,18 +47,24 @@
 
   {% compress js %}
       <script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
-    
-      <script src="{% static 'assets/js/main.js' %}"></script>
+      
+      <!--  script src="{% static 'js/main.js' %}"></script -->
   {% endcompress %}
 
   {% block footer_scripts %}{% endblock %}
 
+    <script src="{% static "tmp/jquery-migrate-1.2.1.min.js" %}"></script>
+    <script src="{% static "tmp/plugins.js" %}"></script>
+    <script src="{% static "tmp/main.js" %}"></script>
+
   {% compress js %}
-      <script src="{% static 'assets/js/google_analytics.js' %}"></script>
+    {% if GA_ID %}
+      <script src="{% static 'js/google_analytics.js' %}"></script>
       <script>
         ga('create', '{{ GA_ID }}', 'auto');
         ga('send', 'pageview');
       </script>
+    {% endif %}
   {% endcompress %}
 </body>
 </html>

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags kdl_wagtail %}
+
+{% block main %}
+    Section page
+    
+    {% for section in page.body %}
+        <hr/>
+        {% include_block_kdl section %}
+    {% endfor %}
+    
+{% endblock %}
+

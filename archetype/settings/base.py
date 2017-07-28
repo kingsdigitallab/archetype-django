@@ -18,7 +18,7 @@ from kdl_ldap.settings import *  # noqa
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 PROJECT_NAME = 'archetype'
-PROJECT_TITLE = ''
+PROJECT_TITLE = 'Archetype'
 
 # -----------------------------------------------------------------------------
 # Core Settings
@@ -62,11 +62,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_extensions'
+    'django_extensions',
+    'compressor',
 ]
 
 INSTALLED_APPS += [    # your project apps here
-
+    'kdl_wagtail',
     'activecollab_digger',
     'kdl_ldap',
     'rest_framework',
@@ -83,7 +84,10 @@ INSTALLED_APPS += [    # your project apps here
     'wagtail.contrib.wagtailapi',
     'wagtail.contrib.wagtailroutablepage',
     'wagtail.contrib.table_block',
+
+    'modelcluster',
     'taggit',
+
     'wagtail.wagtailsearch',
 ]
 
@@ -143,7 +147,9 @@ LOGGING = {
     }
 }
 
-MIDDLEWARE_CLASSES = (
+# GN:
+# MIDDLEWARE_CLASSES = (
+MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -153,12 +159,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-
-
     'wagtail.wagtailcore.middleware.SiteMiddleware',
     'wagtail.wagtailredirects.middleware.RedirectMiddleware',
-
-)
+]
 
 ROOT_URLCONF = PROJECT_NAME + '.urls'
 
@@ -180,11 +183,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
                 'activecollab_digger.context_processors.activecollab_digger',
-
-
-
             ],
-            'debug': False,
         },
     },
 ]
