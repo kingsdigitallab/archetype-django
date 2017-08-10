@@ -76,6 +76,7 @@ def include_block_kdl(context, obj, filter=None):
             'section_{}_item_{}'.format(parent, obj_type or parent),
             'section_{}_item'.format(obj_type or parent),
             'section_{}_item'.format(parent),
+            'section_item',
         ]
 
     # print(paths)
