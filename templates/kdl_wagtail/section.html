@@ -8,22 +8,24 @@
         <div class="col-twelve with-bottom-line">
             <h5>{{ value.title }}</h5>
             <h1>{{ value.long_title }}</h1>
-            <p class="lead">{{ value.body }}</p>
+            <p class="lead">{{ value.body|striptags }}</p>
         </div>
     </div>
-    <div class="row {{ value.type }}-content">
-        {% block section-content %}
-            {% block section-items_before %}
-                <p>Default section template for {{ value.title }} ({{ value.type }})</p>
+    {% block section-content-parent %}
+        <div class="row {{ value.type }}-content">
+            {% block section-content %}
+                {% block section-items_before %}
+                    {# <p>Default section template for {{ value.title }} ({{ value.type }})</p> #}
+                {% endblock %}
+                {% block section-items %}
+                    {% for item in value.items %}
+                        {% include_block_kdl item %}
+                    {% endfor %}
+                {% endblock %}
+                {% block section-items_after %}
+                {% endblock %}
             {% endblock %}
-            {% block section-items %}
-                {% for item in value.items %}
-                    {% include_block_kdl item %}
-                {% endfor %}
-            {% endblock %}
-            {% block section-items_after %}
-            {% endblock %}
-        {% endblock %}
-    </div>
+        </div>
+    {% endblock %}
 </section>
 {% endblock %}

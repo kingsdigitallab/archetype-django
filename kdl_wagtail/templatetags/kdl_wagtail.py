@@ -73,10 +73,12 @@ def include_block_kdl(context, obj, filter=None):
     else:
         parent = new_context['section_type']
         paths = [
-            'section_{}_item_{}'.format(parent, obj_type),
-            'section_{}_item'.format(obj_type),
+            'section_{}_item_{}'.format(parent, obj_type or parent),
+            'section_{}_item'.format(obj_type or parent),
             'section_{}_item'.format(parent),
         ]
+
+    # print(paths)
 
     # prefix with path
     paths = ['kdl_wagtail/{}.html'.format(i) for i in paths]
