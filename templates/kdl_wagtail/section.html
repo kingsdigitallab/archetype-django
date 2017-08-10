@@ -1,4 +1,29 @@
-{% load wagtailcore_tags %}
-<p>
-Default section template for {{ value.title }} ({{ value.type }})
-</p>
+{% load wagtailcore_tags kdl_wagtail %}
+
+{# BASE template for a section #}
+
+{% block section %}
+<section id="{{ value.type }}">
+    <div class="row section-intro">
+        <div class="col-twelve with-bottom-line">
+            <h5>{{ value.title }}</h5>
+            <h1>{{ value.long_title }}</h1>
+            <p class="lead">{{ value.body }}</p>
+        </div>
+    </div>
+    <div class="row {{ value.type }}-content">
+        {% block section-content %}
+            {% block section-items_before %}
+                <p>Default section template for {{ value.title }} ({{ value.type }})</p>
+            {% endblock %}
+            {% block section-items %}
+                {% for item in value.items %}
+                    {% include_block_kdl item %}
+                {% endfor %}
+            {% endblock %}
+            {% block section-items_after %}
+            {% endblock %}
+        {% endblock %}
+    </div>
+</section>
+{% endblock %}

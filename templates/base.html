@@ -1,7 +1,12 @@
 {% load staticfiles compress  %}
 <!DOCTYPE html>
-<html>
-<head class=" js " lang="en">
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{% block meta_title %}{% endblock %} | Archetype</title>
@@ -9,28 +14,27 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="stylesheet" href="{% static "tmp/base.css" %}">
-  <link rel="stylesheet" href="{% static "tmp/main.css" %}">
-  <link rel="stylesheet" href="{% static "tmp/vendor.css" %}">
-  <link rel="stylesheet" href="{% static "tmp/font-awesome.min.css" %}">
+  <link rel="stylesheet" href="{% static "scss/base.css" %}">
+  <link rel="stylesheet" href="{% static "scss/main.css" %}">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
   {% compress css %}
     <!-- link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}" -->
   {% endcompress %}
   
-  <script src="{% static "tmp/modernizr.js" %}"></script>
+  <!-- script  -->
+  <script src="{% static "js/modernizr.js" %}"></script>
   
+  <!-- favicons -->
   <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
   
 </head>
-<body>
+<body id="top">
   <header>
     {% include 'includes/header.html' %}
   </header>
-
-  <nav>
-    {% include 'includes/navigation.html' %}
-  </nav>
 
   <main>
     {% block title %}{% endblock %}
@@ -44,18 +48,23 @@
         {% include 'includes/footer.html' %}
     {% endblock %}
   </footer>
+  
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
 
   {% compress js %}
-      <script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
       
       <!--  script src="{% static 'js/main.js' %}"></script -->
   {% endcompress %}
 
   {% block footer_scripts %}{% endblock %}
 
-    <script src="{% static "tmp/jquery-migrate-1.2.1.min.js" %}"></script>
-    <script src="{% static "tmp/plugins.js" %}"></script>
-    <script src="{% static "tmp/main.js" %}"></script>
+      <!-- script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script -->
+      <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!--  script src="{% static "js/jquery-migrate-1.2.1.min.js" %}"></script -->
+    <script src="{% static "js/plugins.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
 
   {% compress js %}
     {% if GA_ID %}

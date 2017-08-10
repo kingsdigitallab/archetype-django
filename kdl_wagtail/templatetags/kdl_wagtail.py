@@ -5,6 +5,24 @@ from django.template.loader import render_to_string
 register = template.Library()
 
 
+@register.filter()
+def kdl_sugar(value):
+    return mark_safe(value.replace('%br%', '<br/>'))
+
+
+@register.simple_tag(takes_context=True)
+def smoothscroll(context):
+    ret = ''
+
+    import re
+    path_info = context.request.path_info
+    path = re.sub(r'#.*', '', path_info)
+    if path == '/':
+        ret = 'smoothscroll'
+
+    return ret
+
+
 @register.simple_tag(takes_context=True)
 def include_block_kdl(context, obj, filter=None):
     '''

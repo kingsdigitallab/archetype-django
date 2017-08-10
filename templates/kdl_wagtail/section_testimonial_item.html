@@ -1,12 +1,13 @@
 {% load wagtailcore_tags kdl_wagtail wagtailimages_tags %}
 
-<div class="testimonial">
+<div class="testimonials-content insert">
     <div class="avatar col-1-4 tab-1-3 mob-full">
         {% image value.image original %}
         <h5>{{ value.title }}</h5>
-        <span>{{ value.long_title }}</span>
+        <h6>{{ value.long_title }}</h6>
     </div>
     <div class="col-3-4 tab-2-3 mob-full">
         {{ value.body }}
     </div>
 </div>
+

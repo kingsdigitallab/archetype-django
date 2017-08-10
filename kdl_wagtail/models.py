@@ -44,7 +44,7 @@ class SectionItemBlock(GenericBlock):
     image = ImageChooserBlock(required=False)
 
     class Meta:
-        template = ['kdl_wagtail/section_item.html']
+        template = ['kdl_wagtail/section__item.html']
 
 
 class SectionBlock(GenericBlock):

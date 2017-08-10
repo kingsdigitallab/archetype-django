@@ -1,0 +1,28 @@
+{% extends "kdl_wagtail/section.html" %}
+{% load wagtailcore_tags kdl_wagtail staticfiles %}
+
+{% block section-content %}
+    {% block section-items_before %}
+        {% for item in value.items %}
+            {% include_block_kdl item '-' %}
+        {% endfor %}
+    {% endblock %}
+    {% block section-items %}
+        <div class="about-features block-1-3 block-s-1-2 block-tab-full group">
+            {% for item in value.items %}
+                {% if item.type == '' %}
+                    <div class="bgrid feature">
+                        <img src="{% static 'images/'|add:item.long_title %}" alt="{{ item.title }}">
+                        <h3>{{ item.title }}</h3>
+                        {{ item.body }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <div class="col-twelve">
+                <br>
+                <p>At the heart of Archetype is a philosophy that digital tools should enable scholars in what they know best how to do. It doesn’t aim to replace your workflow, but augment it with tools that adapt to your needs. Archetype is an integrated suite of web-based tools for the study of handwriting, text, art history and iconography. Using Archetype, scholars can annotate, describe and tag an image, or part of an image. The strength of Archetype is that your annotations are stored in a structured database, allowing you to explore your research data using powerful, built-in search facilities. Archetype may be used by individual scholars, or as the hub of a collaborative project, or to enable the sharing data with scholars anywhere.</p>
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}
+        
