@@ -1,0 +1,10 @@
+{% extends "kdl_wagtail/section.html" %}
+{% load wagtailcore_tags kdl_wagtail staticfiles %}
+
+{% block section-items %}
+    {% for item in value.items %}
+        <div class="row">
+            {% include_block_kdl item %}
+        </div>
+    {% endfor %}
+{% endblock %}

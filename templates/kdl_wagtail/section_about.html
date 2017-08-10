@@ -4,7 +4,11 @@
 {% block section-content %}
     {% block section-items_before %}
         {% for item in value.items %}
-            {% include_block_kdl item '-' %}
+            {% if item.type == 'testimonials' %}
+                <div class="testimonials-content insert">
+                    {% include_block_kdl item %}
+                </div>
+            {% endif %}
         {% endfor %}
     {% endblock %}
     {% block section-items %}
