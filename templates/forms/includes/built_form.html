@@ -1,0 +1,40 @@
+{# <h1>{{ form.title }}</h1> #}
+{% if form.intro %}
+<p>{{ form.intro }}</p>
+{% endif %}
+{{ form_for_form.media }}
+
+<div id="errormessage">{{ form.non_field_errors }}</div>
+
+<form action="{{ form.get_absolute_url }}" method="post" role="form" class="contactForm"
+    {% if form_for_form.is_multipart %}enctype="multipart/form-data"{% endif %}>
+    {% csrf_token %}
+    
+    {% for field in form_for_form %}
+        <div class="form-group">
+            <h6>
+                {{ field.label }}
+                {#{ field.label_tag }#}
+            </h6>            
+            {{ field }}
+
+            {% if field.errors %}
+                <div class="validation">
+                    {{ field.errors }}
+                </div>
+            {% endif %}
+            
+            {% if field.help_text %}
+                <p class="help">{{ field.help_text|safe }}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+    
+    {# { form_for_form.as_p } #}
+    
+    <div style="clear:left;">&nbsp;</div>
+
+    <div class="center">
+        <button class="submit" type="submit">{{ form.button_text }}</button>
+    </div>
+</form>

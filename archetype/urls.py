@@ -8,6 +8,7 @@ from wagtail.wagtailcore import urls as wagtail_urls
 from wagtail.wagtaildocs import urls as wagtaildocs_urls
 from wagtail.wagtailsearch.urls import frontend as wagtailsearch_frontend_urls
 from .views import view_static_template
+import forms_builder.forms.urls  # add this import
 
 kdl_ldap_register_signal_hadlers()
 
@@ -23,6 +24,9 @@ urlpatterns = [
     url(r'^documents/', include(wagtaildocs_urls)),
     url(r'^search/', include(wagtailsearch_frontend_urls)),
     url(r'^tmp/(?P<path>.*)$', view_static_template),
+    url(r'^forms/', include(forms_builder.forms.urls)),
+]
+urlpatterns += [
     url(r'', include(wagtail_urls)),
 ]
 

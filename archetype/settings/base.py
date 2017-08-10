@@ -89,9 +89,14 @@ INSTALLED_APPS += [    # your project apps here
     'taggit',
 
     'wagtail.wagtailsearch',
+    'forms_builder.forms',
+    # required by forms_builder
+    'django.contrib.sites',
 ]
 
 INTERNAL_IPS = ('127.0.0.1', )
+
+FORMS_BUILDER_USE_SITES = False
 
 LOGGING_ROOT = os.path.join(BASE_DIR, 'logs')
 LOGGING_LEVEL = logging.WARN
