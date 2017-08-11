@@ -1,0 +1,25 @@
+{% extends "kdl_wagtail/section.html" %} 
+{% load wagtailcore_tags kdl_wagtail forms_builder_tags %} 
+
+{% block section %}
+<section id="contact">
+    <div class="row section-intro">
+        <div class="col-twelve with-bottom-line">
+            <h5>{{ value.title }}</h5>
+            <h1>{{ value.long_title }}</h1>
+            <p class="lead">{{ value.body|striptags }}</p>
+        </div>
+    </div>
+    <div class="row contact-content">
+        <div class="col-full">
+            
+            <div class="form">
+        
+                <hr>
+        
+                {% include "kdl_wagtail/social_links.html" %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
