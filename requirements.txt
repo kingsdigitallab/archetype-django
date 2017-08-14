@@ -1,4 +1,4 @@
-django
+django<1.11
 django-compressor
 django-extensions
 django-grappelli
@@ -14,3 +14,4 @@ django-activecollab-digger
 django-kdl-ldap
 wagtail
 django-forms-builder
+django<1.11
