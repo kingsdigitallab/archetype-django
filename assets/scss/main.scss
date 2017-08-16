@@ -1,1 +1,1932 @@
-/** Your custom scss here **/
+/* Archetype main scss */
+
+/* Table of contents
+ *
+ * 1. ----- Webfonts and iconfonts
+ * 2. ----- Base style overrides
+ *  2.1 --- Base styles - Media queries
+ * 3. ----- Links
+ * 4. ----- Typography
+ * 5. ----- Spacing
+ * 6. ----- Block grids paddings
+ * 7. ----- Preloader
+ * 8. ----- Forms
+ * 9. ----- Style Placeholder Text
+ * 10. ---- Buttons
+ * 11. ---- Common styles
+ *  11.1 -- Common styles: responsive
+ * 12. ---- Header
+ *  12.1 -- Header: responsive
+ * 13. ---- Primary navigation
+ *  13.1 -- Hide toggle button
+ *  13.2 -- Main-nav-wrap
+ * 14. ---- Hero
+ *  14.1 -- Hero: responsive
+ * 15. ---- Video popup modal
+ *  15.1 -- Video popup modal: responsive
+ * 16. ---- Process
+ *  16.1 -- Process: responsive
+ * 17. ---- Projects
+ *  17.1 -- Projects: responsive
+ * 18. ---- Download section
+ *  18.1 -- Download: responsive
+ * 19. ---- Testimonials
+ * 20. ---- Additional
+ * 21. ---- Case studies
+ *  21.1 -- Case studies: responsive
+ * 22. ---- FAQs
+ *  22.1 -- FAQs: responsive
+ * 23. ---- Contact
+ * 24. ---- Footer
+ *  24.1 -- Footer: responsive
+ * 25. ---- Go to top
+*/
+
+
+/* 1. Webfonts and iconfonts */
+
+@import url("fonts.css");
+
+/* 2. Base style overrides */
+
+html {
+    font-size: 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #14181E;
+    color: #737373;
+    font-family: "merriweather-regular", serif;
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+/* 2.1 Base styles - Media queries */
+
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 9.375px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 9.375px;
+    }
+}
+
+/* 3. Links */
+
+a,
+a:visited {
+    color: #9093b4;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+a:focus,
+a:hover {
+    color: #632737;
+}
+
+/* 4. Typography */
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h01,
+.h02,
+.h03,
+.h04,
+.h05,
+.h06 {
+    color: #252525;
+    font-family: "raleway-bold", sans-serif;
+    font-style: normal;
+    margin-bottom: 2.1rem;
+    text-rendering: optimizeLegibility;
+}
+
+h3,
+h4,
+.h03,
+.h04 {
+    margin-bottom: 1.8rem;
+}
+
+h5,
+h6,
+.h05,
+.h06 {
+    font-family: "raleway-heavy";
+    margin-bottom: 1.2rem;
+}
+
+h1,
+.h01 {
+    font-size: 3.1rem;
+    letter-spacing: -.1rem;
+    line-height: 1.35;
+}
+
+@media only screen and (max-width:600px) {
+    h1,
+    .h01 {
+        font-size: 2.6rem;
+        letter-spacing: -.07rem;
+    }
+}
+
+h2,
+.h02 {
+    font-size: 2.4rem;
+    line-height: 1.25;
+}
+
+h3,
+.h03 {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+h4,
+.h04 {
+    font-size: 1.7rem;
+    line-height: 1.76;
+}
+
+h5,
+.h05 {
+    font-size: 1.4rem;
+    letter-spacing: .15rem;
+    line-height: 1.7;
+    text-transform: uppercase;
+}
+
+h6,
+.h06 {
+    font-size: 1.3rem;
+    letter-spacing: .15rem;
+    line-height: 1.85;
+    text-transform: uppercase;
+}
+
+p {
+    text-align: justify;
+
+    &.lead {
+        color: #737373;
+        font-family: "merriweather-light", serif;
+        font-size: 1.8rem;
+        line-height: 1.8;
+        text-align: center;
+    }
+
+    img {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    p {
+        &.lead {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+
+hr {
+    border: solid #cfcfd5;
+    border-width: 1px 0 0;
+    clear: both;
+    height: 0;
+    margin: 2.4rem 0 1.5rem;
+}
+
+/* 5. Spacing */
+
+button,
+.button {
+    border: 2px solid;
+    margin-bottom: 1.2;
+}
+
+fieldset {
+    margin-bottom: 1.5rem;
+}
+
+input,
+textarea,
+select,
+pre,
+blockquote,
+figure,
+table,
+p,
+ul,
+ol,
+dl,
+form,
+.fluid-video-wrapper,
+.iw-custom-select {
+    margin-bottom: 3rem;
+}
+
+span {
+    font-weight: bold;
+}
+
+/* 6. Block grids paddings */
+
+.bgrid {
+    padding: 0 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .bgrid {
+        padding: 0 18px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .bgrid {
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .bgrid {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .bgrid {
+        padding: 0;
+    }
+}
+
+/* 7. Preloader */
+
+#preloader {
+    background: #0F1215;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
+}
+
+.no-js #preloader,
+.oldie #preloader {
+    display: none;
+}
+
+#loader {
+    -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+    border-bottom: solid 60px #632737;
+    border-left: solid 30px transparent;
+    border-right: solid 30px transparent;
+    height: 80px;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    width: 60px;
+}
+
+@-webkit-keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+/* 8. Forms */
+
+fieldset {
+    border: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+textarea,
+select {
+    background: #fff;
+    // border: 0; Which one?
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    color: #737373;
+    display: block;
+    font-family: "merriweather-regular", sans-serif;
+    font-size: 1.5rem;
+    height: 6rem;
+    line-height: 3rem;
+    max-width: 100%;
+    outline: none;
+    padding: 1.5rem 2rem;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    vertical-align: middle;
+
+    &:focus {
+        background: #f4fffe;
+        border: 1px solid #d2fef9;
+        color: #000;
+    }
+}
+
+label,
+legend {
+    color: #404040;
+    display: block;
+    font-family: "merriweather-bold", sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: .6rem;
+
+    span {
+        color: #632737;
+    }
+}
+
+textarea {
+    min-height: 25rem;
+}
+
+/* 9. Style Placeholder Text */
+
+::-webkit-input-placeholder,
+:-moz-placeholder,      /* Firefox 18- */
+::-moz-placeholder,     /* Firefox 19+ */
+:-ms-input-placeholder {
+    color: #a1a1a1;
+}
+
+.placeholder {
+    color: #a1a1a1 !important;
+}
+
+/* 10. Buttons */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    background: transparent;
+    border: 2px solid;
+    color: #6e5867;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "raleway-bold", sans-serif;
+    font-size: 1.6rem;
+    height: 6rem;
+    line-height: 6rem;
+    margin: 0 .3rem 1rem 0;
+    padding: 0 3rem;
+    text-decoration: none;
+    text-align: center;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+
+    &:hover {
+        background: transparent;
+        color: #fff;
+        outline: 0;
+    }
+
+    &.button-primary {
+        background: #632737;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            background: #04998a;
+        }
+    }
+}
+
+/* 11. Common styles */
+
+.section-intro {
+    margin-bottom: 5.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    position: relative;
+    text-align: center;
+
+    h1 {
+        color: #252525;
+        font-family: "merriweather-bold", serif;
+        font-size: 4.8rem;
+        line-height: 1.25;
+        margin-bottom: 1.2rem;
+    }
+
+    h5 {
+        color: rgba(56, 66, 78, 0.5);
+        font-size: 1.6rem;
+        letter-spacing: .4rem;
+        line-height: 1.875;
+        margin-bottom: 0.3rem;
+    }
+
+    .lead {
+        color: rgba(0, 0, 0, 0.45);
+    }
+
+    .with-bottom-line {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .with-bottom-line::after {
+        &::after {
+            background-color: #632737;
+            bottom: 0;
+            content: '\0020';
+            display: block;
+            height: 3px;
+            left: 50%;
+            margin-left: -60px;
+            position: absolute;
+            width: 120px;
+        }
+    }
+}
+
+.testimonials-content.insert {
+    background: #f5f5f5;
+    padding:0;
+}
+
+/* 11.1 Common styles: responsive */
+
+@media only screen and (max-width: 768px) {
+    .section-intro {
+        max-width: 650px;
+
+        h1 {
+            font-size: 4.2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .section-intro {
+        h1 {
+            font-size: 3.8rem;
+        }
+
+        h5 {
+            font-size: 1.5rem;
+            letter-spacing: .3rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .section-intro h1 {
+        font-size: 3.6rem;
+    }
+}
+
+/* 12. Header */
+
+header {
+    background: transparent;
+    left: 0;
+    position: absolute;
+    top: 24px;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    z-index: 600;
+
+    .logo {
+        left: 35px;
+        margin-top: 2px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 600;
+
+        a {
+            background: url("../images/archetype-logo-a-light.svg") no-repeat center;
+            background-size: 78px 90px;
+            border: none;
+            color: transparent;
+            display: block;
+            font: 0px/0 a;  // shorthand property that zeros out the font size
+                            // and line-height. It passes validation
+            height: 90px;
+            margin: 0;
+            padding: 0;
+            text-shadow: none;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+            width: 78px;
+        }
+    }
+
+    .row {
+        height: 66px;
+        position: relative;
+        width: auto;
+    }
+}
+
+.sticky {
+    background: #eee;
+    position: fixed;
+    top: 0;
+
+    .logo {
+        a {
+            background: url("../images/archetype-logo-a-mid.svg") no-repeat center;
+            background-size: 44px 50px;
+            color: transparent;
+            display: block;
+            height: 50px;
+            width: 44px;
+        }
+    }
+}
+
+/* 12.1 Header: responsive */
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 6px 0;
+        top: 0;
+
+        .logo {
+            a {
+                background-size: 38px 38px;
+                height: 38px;
+                width: 38px;
+            }
+        }
+    }
+}
+
+/* 13. Primary navigation */
+
+#main-nav-wrap,
+.main-navigation {
+    margin: 0;
+    padding: 0;
+}
+
+/* 13.1 Hide toggle button */
+
+a {
+    &.menu-toggle {
+        display: none;
+    }
+}
+
+/* 13.2 Main-nav-wrap */
+
+#main-nav-wrap {
+    font-family: "raleway-heavy", sans-serif;
+    font-size: 11.5px;
+    letter-spacing: 1.5px;
+    position: absolute;
+    right: 30px;
+    text-transform: uppercase;
+    top: 0;
+}
+
+.main-navigation {
+    display: inline-block;
+    min-height: 66px;
+    text-align: left;
+    width: auto;
+
+    a {
+        .current {
+            color: #9093b4;
+
+            &::after {
+                background-color: #9093b4;
+                bottom: 20%;
+                content: '\0020';
+                display: block;
+                height: 3px;
+                left: 50%;
+                position: absolute;
+                -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+                -moz-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                width: 80%;
+            }
+        }
+    }
+
+    li {
+        display: inline-block;
+        height: 66px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+
+        a {
+            color: #98999a;
+            display: block;
+            line-height: 30px;
+            padding: 18px 7px;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            -moz-transition: color 0.3s ease-in-out;
+            -o-transition: color 0.3s ease-in-out;
+            -webkit-transition: color 0.3s ease-in-out;
+            -ms-transition: color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        &.current {
+            a {
+                color: #9093b4;
+
+                &::after {
+                    background-color: #9093b4;
+                    bottom: 20%;
+                    content: '\0020';
+                    display: block;
+                    height: 3px;
+                    left: 50%;
+                    position: absolute;
+                    -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                    -moz-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -ms-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                    width: 80%;
+
+                }
+            }
+        }
+
+        &.highlight {
+            a {
+                color: #9093b4;
+            }
+        }
+
+        &.with-sep {
+            a {
+                margin-left: 8px;
+                padding-left: 22px;
+                position: relative;
+
+                &::before {
+                    background-color: #98999a;
+                    content: '\0020';
+                    display: block;
+                    height: 20px;
+                    left: 0;
+                    margin-top: -10px;
+                    position: absolute;
+                    top: 50%;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -ms-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                    width: 1px;   
+                }
+
+                &.current {
+                    &::after {        
+                        left: 56%;
+                        width: 76%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sticky {
+    .main-navigation {
+        li {
+
+            a {
+                color: #9093b4;
+                &:hover {
+                    color: #632737;
+                }
+            }
+
+            &.current {
+                a {
+                    // color: #9093b4;
+
+                    &::after {
+                        background-color: #9093b4;
+                    }
+                }
+            }
+
+            // &.highlight {
+            //     a {
+            //         color: #9093b4;
+            //     }
+            // }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #main-nav-wrap {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 69px;
+        width: 100%;
+    }
+
+    a {
+        .menu-toggle {
+            display: block;
+            height: 40px;
+            margin-top: -20px;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            width: 40px;
+
+            span {
+                background-color: #9093b4;
+                bottom: auto;
+                color: transparent;
+                display: block;
+                font: 0px/0 a;  // shorthand property that zeros out the font size
+                                // and line-height. It passes validation
+                height: 3px;
+                left: auto;
+                margin-top: -1.5px;
+                position: absolute;
+                right: 8px;
+                text-shadow: none;
+                top: 50%;
+                -moz-transition: background 0.2s ease-in-out;
+                -o-transition: background 0.2s ease-in-out;
+                -webkit-transition: background 0.2s ease-in-out;
+                -ms-transition: background 0.2s ease-in-out;
+                transition: background 0.2s ease-in-out;
+                width: 24px;
+
+                &::after,
+                &::before {
+                    background-color: inherit;
+                    content: '';
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    -moz-transition-duration: 0.2s, 0.2s;
+                    -o-transition-duration: 0.2s, 0.2s;
+                    -webkit-transition-duration: 0.2s, 0.2s;
+                    -ms-transition-duration: 0.2s, 0.2s;
+                    transition-duration: 0.2s, 0.2s;
+                    -moz-transition-delay: 0.2s, 0s;
+                    -o-transition-delay: 0.2s, 0s;
+                    -webkit-transition-delay: 0.2s, 0s;
+                    -ms-transition-delay: 0.2s, 0s;
+                    transition-delay: 0.2s, 0s;
+                    width: 100%;
+                }
+
+                &::after {
+                    bottom: -8px;
+                    -moz-transition-property: bottom, transform;
+                    -o-transition-property: bottom, transform;
+                    -webkit-transition-property: bottom, transform;
+                    -ms-transition-property: bottom, transform;
+                    transition-property: bottom, transform;
+                }
+
+                &::before {
+                    top: -8px;
+                    -moz-transition-property: top, transform;
+                    -o-transition-property: top, transform;
+                    -webkit-transition-property: top, transform;
+                    -ms-transition-property: top, transform;
+                    transition-property: top, transform;  
+                }
+            }
+        }
+
+        &.is-clicked {
+            span {
+                background-color: rgba(255, 255, 255, 0);
+
+                &::after,
+                &::before {
+                    background-color: white;
+                    -moz-transition-delay: 0s, 0.2s;
+                    -o-transition-delay: 0s, 0.2s;
+                    -webkit-transition-delay: 0s, 0.2s;
+                    -ms-transition-delay: 0s, 0.2s;
+                    transition-delay: 0s, 0.2s;
+                }
+
+                &::after {
+                    bottom: 0;
+                    -webkit-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+
+                &::before {
+                    top: 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);                    
+                }
+            }
+        }
+    }
+
+    .main-navigation {
+        background: #14171c;
+        clear: both;
+        display: none;
+        height: auto;
+        margin: 0;
+        padding: 48px 42px 54px;
+        width: 100%;
+
+        a {
+            border: none;
+            color: #e6e6e6;
+            display: block;
+            line-height: 16px;
+            padding: 18px 0;
+            width: auto;
+
+            &:hover {
+                color: #ff7b29;
+            }         
+        }
+
+        li {
+            &.current > a {
+                background: none;
+                color: #ff7b29;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            &.with-sep {
+                a {
+                    margin-left: 0;
+                    padding-left: 0;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-navigation > li {
+        border-bottom: 1px dotted rgba(200, 200, 200, 0.08);
+        display: block;
+        height: auto;
+        padding: 0;
+        text-align: left;
+
+        &:first-child {
+            border-top: 1px dotted rgba(200, 200, 200, 0.08);
+        }
+    }
+}
+
+// Make sure the menu is visible on larger screens
+
+@media only screen and (min-width: 769px) {
+    #main-nav-wrap ul.main-navigation {
+        display: block !important;
+    }
+}
+
+/* 14. Hero */
+
+#hero {
+    background: rgba(36, 15, 20, 0.8);
+    display: table;
+    height: 100%;
+    min-height: 720px;
+    position: relative;
+    width: 100%;
+
+    &:after {
+        background: #14181e url(../images/background-hero.png) no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        bottom: 0;
+        content: "";
+        filter: blur(0px); 
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+.hero-content {
+    display: table-cell;
+    text-align: center;
+    -webkit-transform: translateY(-1.2rem);
+    -ms-transform: translateY(-1.2rem);
+    transform: translateY(-1.2rem);
+    vertical-align: middle;
+
+    h5 {
+        color: #fff;
+        font-family: "merriweather-bold", serif;
+        font-size: 2.8rem;
+        letter-spacing: .25rem;
+        line-height: 1.667;
+        margin-bottom: 0.6rem;
+        text-transform: none;
+    }
+
+    i {
+        &.fa.fa-angle-double-down {
+            color: white;
+            font-size: 3rem;
+
+            &:hover {
+                color: #9093b4;
+            }
+        }
+    }
+
+    .button {
+        background: transparent;
+        border: 3px solid;
+        color: #9093b4;
+        font-family: "raleway-heavy", sans-serif;
+        font-size: 1.4rem;
+        height: 6.6rem;
+        letter-spacing: .4rem;
+        line-height: 6rem;
+        margin: 1.8rem;
+        padding: 0 3rem !important;
+        text-transform: uppercase;
+        width: 23rem;
+
+        &:focus,
+        &:hover {
+            background: #9093b4 !important;
+            border-color: #9093b4;
+            color: #444;
+        }
+    }
+
+    .video-link {
+        a {
+            display: inline-block;
+            margin-bottom: 4.2rem;
+            outline: none;
+        }
+    }
+}
+
+/* 14.1 Hero: responsive */
+
+@media only screen and (max-width: 800px) {
+    #hero {
+        min-height: 660px;
+    }
+
+    .hero-content {
+        h5 {
+            font-size: 2rem;
+            letter-spacing: .15rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #hero {
+        min-height: 550px;
+    }
+
+    .hero-content {
+         h5 {
+            font-size: 1, 8rem;
+            letter-spacing: .15rem;
+        }
+    }
+}
+
+/* 15. Video popup modal */
+
+.popup-modal {
+    background: #fff;
+    margin: 0 auto;
+    max-width: 800px;
+    position: relative;
+
+    .close-popup {
+        color: transparent;                 // Which one???
+        color: rgba(255, 255, 255, 0.5);    // Which one???
+        cursor: pointer;
+        display: block;
+        font: 0px/0 a;  // shorthand property that zeros out the font size
+                        // and line-height. It passes validation
+        height: 30px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        text-shadow: none;
+        top: -42px;
+        width: 30px;
+
+        &::before {
+            color: rgba(255, 255, 255, 0.5);
+            content: "\f2d7";
+            display: block;
+            font-family: "Ionicons";
+            font-size: 21px;
+            height: 30px;
+            line-height: 30px;
+            width: 30px;
+        }
+    }
+}
+
+/* 15.1 Video popup modal: responsive */
+
+@media only screen and (max-width: 800px) {
+    .popup-modal {
+        max-width: 700px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .popup-modal {
+        margin: 0 20px;
+        width: auto;
+    }
+}
+
+/* About */
+
+#about {
+    background: #fff;
+    overflow: hidden;
+    padding-top: 12rem;
+    padding-bottom: 15rem;
+}
+
+.about-content {
+    text-align: center;
+
+    .button:focus {
+        background: #9093b4 !important;
+        border-color: #9093b4;
+        color: #444;
+    }
+
+    .testimonials-content {
+        &.insert {
+            background: #f5f5f5;
+            padding: 5rem 0 0;
+        }
+    }
+}
+
+.about-features {
+    margin-top: 7rem;
+
+    h3 {
+        color: #6e5867;
+        font-family: "raleway-heavy";
+        font-size: 1.7rem;
+        letter-spacing: .15rem;
+        line-height: 1.765;
+        margin-bottom: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    img {
+        opacity: 0.85;
+        width: 110px;
+    }
+
+    p {
+        &:first-of-type {
+            &::first-letter {
+                float: left;
+                font-size: 5.5rem;
+                line-height: 5rem;
+                padding-right: 0.5rem;
+                padding-top: 0.9rem;
+            }
+        }
+    }
+}
+
+/* 16. Process */
+
+#process {
+    background-color: rgba(255, 255, 255, 0.95);
+    display: table;
+    height: 100%;
+    min-height: 720px;
+    padding-bottom: 15rem;
+    padding-top: 12rem;
+    position: relative;
+    width: 100%;
+
+    &::after {
+        background: #14181E url(https://previews.123rf.com/images/alephcomo/alephcomo1203/alephcomo120300206/12847158-ancient-manuscript-old-paper-background-Stock-Photo.jpg) no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+.process-content {
+    position: relative;
+    text-align: justify;
+
+    h3 {
+        color: #632737;
+        font-family: "raleway-heavy";
+        font-size: 1.7rem;
+        letter-spacing: .15rem;
+        line-height: 1.765;
+        margin-bottom: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    img {
+        float: left;
+        margin-bottom:4rem; 
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    p {
+        float: left;
+        position: relative;
+        width: 100%;
+
+        &::first-letter {
+            float: left;
+            font-size: 5.5rem;
+            line-height: 5rem;
+            padding-right: 0.5rem;
+            padding-top: 0.9rem;
+        }
+    }
+}
+
+/* 16.1 Process: responsive */
+
+@media only screen and (max-width: 768px) {
+    #process {
+        padding-bottom: 27rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #process {
+        padding-bottom: 21rem;
+    }
+}
+
+/* 17. Projects */
+
+#projects {
+    background: #090909 url(../images/background-example.jpg) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    color: white;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+
+    .section-intro {
+
+        h1 {
+            color: white;
+        }
+
+        h5 {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .with-bottom-line {
+            &::after {
+                background-color: #9093b4;
+            }
+        }
+    }
+
+}
+
+.projects-content {
+    max-width: 1200px;
+    text-align: center;
+
+    h3 {
+        color: #9093b4;
+        font-family: "raleway-heavy";
+        font-size: 1.7rem;
+        line-height: 1.765;
+        margin-bottom: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    p {
+        &:first-of-type::first-letter {
+            float: left;
+            font-size: 5.5rem;
+            line-height: 5rem;
+            padding-right: 0.5rem;
+            padding-top: 0.9rem;
+        }
+    }
+}
+
+/* 17.1 Projects: responsive */
+
+@media only screen and (max-width:768px) {
+    .projects-content {
+        max-width: 600px;
+    }
+}
+
+/* 18. Download section */
+
+#download {
+    background: #f5f5f5;
+    padding-bottom: 9.6rem;
+    padding-top: 12rem;
+}
+
+.download-content {
+    margin-top: 6.6rem;
+    max-width: 1280px;
+
+    .bgrid {
+        margin-bottom: 3.6rem;
+    }
+
+    .block {
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        max-width: 800px;
+        overflow: hidden;
+
+        p {
+            text-align: center;
+        }
+
+        .additional {
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.8rem;
+
+            a {
+                color: rgba(255, 255, 255, 0.5);
+                line-height: 1.8rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .button {
+            background: none;
+            border: 2px solid;
+            color: #fff;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 5rem;
+
+            &:focus,
+            &:hover {
+                background: #fff;
+                border-color: #fff;
+                color: #444;
+            }
+        }
+
+        .one {
+            background: #6e5867;
+            color: #fff;
+            padding-bottom: 2.4rem;
+            position: relative;
+        }
+
+        .part {
+            padding: 3.9rem 1.5rem;
+            text-align: center;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 2.4rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 2.4rem;
+            position: relative;
+
+            &::after {
+                background-color: rgba(255, 255, 255, 0.3);
+                bottom: 0;
+                content: '\0020';
+                display: block;
+                height: 1px;
+                left: 50%;
+                margin-left: -40px;
+                position: absolute;
+                width: 80px;
+            }
+        }
+
+        .two {
+            background: #444;
+            color: #fff;
+            padding-bottom: 2.4rem;
+            position: relative;
+        }
+    }
+}
+
+/* 18.1 Download: responsive */
+
+@media only screen and (max-width: 1140px) {
+    .download-content {
+        max-width: 800px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .download-content {
+        max-width: 420px;
+
+        .bgrid {
+            clear: both !important;
+            float: none !important;
+            margin-left: 0;
+            margin-right: 0;
+            width: 100% !important;
+        }
+    }
+}
+
+/* 19. Testimonials */
+
+#testimonials {
+    background: #fff;
+    min-height: 20.4rem;
+    overflow: hidden;
+    padding-bottom: 12rem;
+    padding-top: 10.2rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.testimonials-content {
+    overflow: hidden;
+    padding: 2rem 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    h5 {
+        margin: 0;
+    }
+
+    h6 {
+        color: rgba(0, 0, 0, 0.4);
+        display: block;
+        font-family: "raleway-semibold", sans-serif;
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        line-height: 2.1rem;
+        text-transform: none;
+    }
+
+    p {
+        background-color: #f5f5f5;
+        font-style: italic;
+        padding: 5rem;
+
+        &::after,
+        &::before {
+            color: #9093b4;
+            display: inline;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 6rem;
+            line-height: 0;
+            position: relative;
+            top: -1.2rem;
+            vertical-align: bottom;
+        }
+
+        &::after {
+            content: '\201D';
+            margin-left: .5rem;
+        }
+
+        &::before {
+            content: '\201C';
+            margin-right: .5rem;
+        }
+    }
+
+    .avatar {
+        img {
+            border: 5px solid #eaeaed;
+            border-radius: 50%;
+            display: block;
+            -webkit-filter: grayscale(50%);
+            /* Safari 6.0 - 9.0 */
+            filter: grayscale(50%);
+            height: 16rem;
+            margin: 0 auto 1.2rem auto;
+            vertical-align: middle;
+            width: 16rem;
+        }
+    }
+}
+
+/* 20. Additional */
+
+.additional {
+    border-top: 1px dotted rgba(0, 0, 0, 0.1);
+    margin-top: 4.8rem;
+    max-width: 650px;
+    padding-top: 6rem;
+    text-align: center;
+}
+
+
+.additional-content {
+    border-top: 1px dotted rgba(0, 0, 0, 0.1);
+    margin-top: 4.8rem;
+    max-width: 650px;
+    padding-top: 6rem;
+    text-align: center;
+}
+
+/* 21. Case studies */
+
+#casestudies {
+    background: white;
+    padding-bottom: 12rem;
+    padding-top: 12rem;
+
+    #contact {
+        background: #fff;
+        padding: 0;
+    }
+
+    #download {
+        background: #fff;
+        padding: 0;
+    }
+}
+
+.casestudies-content {
+    max-width: 1200px;
+    text-align: center;
+
+    a {
+        &.button {
+            background: #9093b4;
+            border: 2px solid #9093b4;
+            color: #fff;
+
+            &:hover {
+                background: transparent;
+                border: 2px solid;
+                color: #9093b4;
+            }
+        }
+    }
+
+    h3 {
+        color: #6e5867;
+        font-family: "raleway-heavy";
+        font-size: 1.7rem;
+        line-height: 1.765;
+        margin-bottom: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    h6 {
+        color: #5c5c5c;
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    p {
+        &.italic {
+            color: #5c5c5c;
+            font-style: italic;
+            font-weight: bold;
+        }
+    }
+
+    .bgrid {
+        padding-bottom: 7rem;
+    }
+
+    .testimonials-content {
+        &.insert {
+            background: #f5f5f5;
+            margin: 0 0 5rem 0;
+            padding: 0;
+
+            p {
+                background: #f5f5f5;
+                padding: 4rem 3rem 1rem;
+            }
+        }
+    }
+}
+
+/* 21.1 Case studies: responsive */
+
+@media only screen and (max-width: 1024px) {
+
+    .casestudies-content .bgrid {
+        border-bottom: 1px solid #eee;
+        margin-bottom: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    /*.casestudies-content .with-bottom-line {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .casestudies-content .with-bottom-line::after {
+        display: block;
+        background-color: #632737;
+        width: 120px;
+        height: 3px;
+        content: '\0020';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        margin-left: -60px;
+    }*/
+}
+
+
+/* 22. FAQs */
+
+#faq {
+    background: #fff;
+    padding-bottom: 12rem;
+    padding-top: 12rem;
+}
+
+.faq-content {
+    margin-top: 5.4rem;
+    max-width: 1020px;
+
+    .bgrid {
+        padding: 0 30px;
+    }
+}
+
+/* 22.1 FAQs: responsive */
+
+@media only screen and (max-width: 768px) {
+    .faq-content {
+        max-width: 650px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .faq-content .bgrid {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .faq-content .bgrid {
+        padding: 0;
+    }
+}
+
+/* 23. Contact */
+
+#contact {
+    background: #f5f5f5;
+    padding-bottom: 12rem;
+    padding-top: 12rem;
+
+    h6 {
+        color: #6e5867;
+        line-height: 0.5rem;
+    }
+
+    .form {
+
+        button[type="submit"] {
+            background: transparent;
+            border: 2px solid;
+            color: #6e5867;
+
+            &:hover {
+                background: #6e5867;
+                border: 2px solid #6e5867;
+                color: #fff;
+            }
+        }
+
+        input,
+        textarea {
+            border-radius: 0;
+            box-shadow: none;
+            width: 100%;
+        }
+
+        #errormessage,
+        #sendmessage {
+            &.show {
+                display: block;
+            }
+        }
+
+        #errormessage {
+            border: 1px solid red;
+            color: red;
+            display: none;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        #sendmessage {
+            border: 1px solid #632737;
+            color: #632737;
+            display: none;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .validation {
+            color: red;
+            display: none;
+            font-size: 13px;
+            font-weight: 400;
+            margin: 0 0 20px;
+        }
+    }
+
+    .info {
+        color: #333333;
+        margin-top: 4rem;
+
+        a {
+            color: #333333;
+
+            &:hover{
+                color: #632737;
+            }
+        }   
+
+        i {
+            color: #6e5867;
+            float: left;
+            font-size: 32px;
+
+            &:hover {
+                color: #632737;
+            }
+        }
+
+        p {
+            line-height: 24px;
+            padding: 0 0 10px 50px;
+        }
+    }
+}
+
+/* 24. Footer */
+
+footer {
+    background: #eee;
+    color: #5c5c5c;
+    font-family: "raleway-medium", sans-serif;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    p {
+        line-height: 2.7rem;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.5rem;
+
+        &.blocktext {
+            font-size: 1.2rem;
+            padding: 2rem 0;
+        }
+    }
+
+    span {
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 0;
+        text-align: center;
+    }
+
+    .logos {
+        text-align: center;
+
+        img {
+            margin: 0 5%;
+            vertical-align: top;
+            width: 80px;
+
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+/* 24.2 Footer: responsive */
+
+@media only screen and (max-width: 768px) {
+    footer .logos img {
+        margin: 0 2%;
+        width: 70px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    footer .logos img {
+        margin: 0 1%;
+        width: 55px;
+    }
+}
+/* 25. Go to top */
+
+#go-top {
+    bottom: 0;
+    display: none;
+    position: fixed;
+    right: 0;
+    z-index: 600;
+
+    a {
+        background: #d8d8d8;
+        border: 0 none;
+        color: #fff;
+        display: block;
+        height: 66px;
+        line-height: 66px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        width: 60px;
+
+        &:hover {
+            background: #9093b4;
+            color: #fff;
+        }
+
+        i {
+            font-size: 3rem;
+            line-height: inherit;
+        }
+    }
+}
