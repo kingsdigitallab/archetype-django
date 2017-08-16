@@ -659,7 +659,7 @@ header {
 /* 13.1 Hide toggle button */
 
 a {
-    .menu-toggle {
+    &.menu-toggle {
         display: none;
     }
 }
