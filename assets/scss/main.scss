@@ -4,7 +4,6 @@
  *
  * 1. ----- Webfonts and iconfonts
  * 2. ----- Base style overrides
- *  2.1 --- Base styles - Media queries
  * 3. ----- Links
  * 4. ----- Typography
  * 5. ----- Spacing
@@ -14,32 +13,23 @@
  * 9. ----- Style Placeholder Text
  * 10. ---- Buttons
  * 11. ---- Common styles
- *  11.1 -- Common styles: responsive
  * 12. ---- Header
- *  12.1 -- Header: responsive
  * 13. ---- Primary navigation
  *  13.1 -- Hide toggle button
  *  13.2 -- Main-nav-wrap
  * 14. ---- Hero
- *  14.1 -- Hero: responsive
  * 15. ---- Video popup modal
- *  15.1 -- Video popup modal: responsive
  * 16. ---- Process
- *  16.1 -- Process: responsive
  * 17. ---- Projects
- *  17.1 -- Projects: responsive
  * 18. ---- Download section
- *  18.1 -- Download: responsive
  * 19. ---- Testimonials
  * 20. ---- Additional
  * 21. ---- Case studies
- *  21.1 -- Case studies: responsive
  * 22. ---- FAQs
- *  22.1 -- FAQs: responsive
  * 23. ---- Contact
  * 24. ---- Footer
- *  24.1 -- Footer: responsive
  * 25. ---- Go to top
+ * 26. ---- Media queries
 */
 
 
@@ -64,26 +54,6 @@ body {
     font-family: "merriweather-regular", serif;
     font-size: 1.6rem;
     line-height: 3rem;
-}
-
-/* 2.1 Base styles - Media queries */
-
-@media only screen and (max-width: 1024px) {
-    html {
-        font-size: 9.375px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    html {
-        font-size: 10px;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    html {
-        font-size: 9.375px;
-    }
 }
 
 /* 3. Links */
@@ -151,14 +121,6 @@ h1,
     line-height: 1.35;
 }
 
-@media only screen and (max-width:600px) {
-    h1,
-    .h01 {
-        font-size: 2.6rem;
-        letter-spacing: -.07rem;
-    }
-}
-
 h2,
 .h02 {
     font-size: 2.4rem;
@@ -209,15 +171,6 @@ p {
     }
 }
 
-@media only screen and (max-width:768px) {
-    p {
-        &.lead {
-            font-size: 1.7rem;
-        }
-    }
-}
-
-
 hr {
     border: solid #cfcfd5;
     border-width: 1px 0 0;
@@ -263,30 +216,6 @@ span {
 
 .bgrid {
     padding: 0 20px;
-}
-
-@media only screen and (max-width: 1024px) {
-    .bgrid {
-        padding: 0 18px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .bgrid {
-        padding: 0 15px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .bgrid {
-        padding: 0 10px;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .bgrid {
-        padding: 0;
-    }
 }
 
 /* 7. Preloader */
@@ -530,37 +459,6 @@ input[type="button"] {
     padding:0;
 }
 
-/* 11.1 Common styles: responsive */
-
-@media only screen and (max-width: 768px) {
-    .section-intro {
-        max-width: 650px;
-
-        h1 {
-            font-size: 4.2rem;
-        }
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .section-intro {
-        h1 {
-            font-size: 3.8rem;
-        }
-
-        h5 {
-            font-size: 1.5rem;
-            letter-spacing: .3rem;
-        }
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .section-intro h1 {
-        font-size: 3.6rem;
-    }
-}
-
 /* 12. Header */
 
 header {
@@ -627,23 +525,6 @@ header {
             display: block;
             height: 50px;
             width: 44px;
-        }
-    }
-}
-
-/* 12.1 Header: responsive */
-
-@media only screen and (max-width: 768px) {
-    header {
-        padding: 6px 0;
-        top: 0;
-
-        .logo {
-            a {
-                background-size: 38px 38px;
-                height: 38px;
-                width: 38px;
-            }
         }
     }
 }
@@ -830,183 +711,6 @@ a {
     }
 }
 
-@media only screen and (max-width: 768px) {
-    #main-nav-wrap {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 69px;
-        width: 100%;
-    }
-
-    a {
-        .menu-toggle {
-            display: block;
-            height: 40px;
-            margin-top: -20px;
-            position: absolute;
-            right: 30px;
-            top: 50%;
-            width: 40px;
-
-            span {
-                background-color: #9093b4;
-                bottom: auto;
-                color: transparent;
-                display: block;
-                font: 0px/0 a;  // shorthand property that zeros out the font size
-                                // and line-height. It passes validation
-                height: 3px;
-                left: auto;
-                margin-top: -1.5px;
-                position: absolute;
-                right: 8px;
-                text-shadow: none;
-                top: 50%;
-                -moz-transition: background 0.2s ease-in-out;
-                -o-transition: background 0.2s ease-in-out;
-                -webkit-transition: background 0.2s ease-in-out;
-                -ms-transition: background 0.2s ease-in-out;
-                transition: background 0.2s ease-in-out;
-                width: 24px;
-
-                &::after,
-                &::before {
-                    background-color: inherit;
-                    content: '';
-                    height: 100%;
-                    left: 0;
-                    position: absolute;
-                    -moz-transition-duration: 0.2s, 0.2s;
-                    -o-transition-duration: 0.2s, 0.2s;
-                    -webkit-transition-duration: 0.2s, 0.2s;
-                    -ms-transition-duration: 0.2s, 0.2s;
-                    transition-duration: 0.2s, 0.2s;
-                    -moz-transition-delay: 0.2s, 0s;
-                    -o-transition-delay: 0.2s, 0s;
-                    -webkit-transition-delay: 0.2s, 0s;
-                    -ms-transition-delay: 0.2s, 0s;
-                    transition-delay: 0.2s, 0s;
-                    width: 100%;
-                }
-
-                &::after {
-                    bottom: -8px;
-                    -moz-transition-property: bottom, transform;
-                    -o-transition-property: bottom, transform;
-                    -webkit-transition-property: bottom, transform;
-                    -ms-transition-property: bottom, transform;
-                    transition-property: bottom, transform;
-                }
-
-                &::before {
-                    top: -8px;
-                    -moz-transition-property: top, transform;
-                    -o-transition-property: top, transform;
-                    -webkit-transition-property: top, transform;
-                    -ms-transition-property: top, transform;
-                    transition-property: top, transform;  
-                }
-            }
-        }
-
-        &.is-clicked {
-            span {
-                background-color: rgba(255, 255, 255, 0);
-
-                &::after,
-                &::before {
-                    background-color: white;
-                    -moz-transition-delay: 0s, 0.2s;
-                    -o-transition-delay: 0s, 0.2s;
-                    -webkit-transition-delay: 0s, 0.2s;
-                    -ms-transition-delay: 0s, 0.2s;
-                    transition-delay: 0s, 0.2s;
-                }
-
-                &::after {
-                    bottom: 0;
-                    -webkit-transform: rotate(-45deg);
-                    -ms-transform: rotate(-45deg);
-                    transform: rotate(-45deg);
-                }
-
-                &::before {
-                    top: 0;
-                    -webkit-transform: rotate(45deg);
-                    -ms-transform: rotate(45deg);
-                    transform: rotate(45deg);                    
-                }
-            }
-        }
-    }
-
-    .main-navigation {
-        background: #14171c;
-        clear: both;
-        display: none;
-        height: auto;
-        margin: 0;
-        padding: 48px 42px 54px;
-        width: 100%;
-
-        a {
-            border: none;
-            color: #e6e6e6;
-            display: block;
-            line-height: 16px;
-            padding: 18px 0;
-            width: auto;
-
-            &:hover {
-                color: #ff7b29;
-            }         
-        }
-
-        li {
-            &.current > a {
-                background: none;
-                color: #ff7b29;
-
-                &:after {
-                    display: none;
-                }
-            }
-
-            &.with-sep {
-                a {
-                    margin-left: 0;
-                    padding-left: 0;
-
-                    &::before {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-
-    .main-navigation > li {
-        border-bottom: 1px dotted rgba(200, 200, 200, 0.08);
-        display: block;
-        height: auto;
-        padding: 0;
-        text-align: left;
-
-        &:first-child {
-            border-top: 1px dotted rgba(200, 200, 200, 0.08);
-        }
-    }
-}
-
-// Make sure the menu is visible on larger screens
-
-@media only screen and (min-width: 769px) {
-    #main-nav-wrap ul.main-navigation {
-        display: block !important;
-    }
-}
-
 /* 14. Hero */
 
 #hero {
@@ -1093,34 +797,6 @@ a {
     }
 }
 
-/* 14.1 Hero: responsive */
-
-@media only screen and (max-width: 800px) {
-    #hero {
-        min-height: 660px;
-    }
-
-    .hero-content {
-        h5 {
-            font-size: 2rem;
-            letter-spacing: .15rem;
-        }
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    #hero {
-        min-height: 550px;
-    }
-
-    .hero-content {
-         h5 {
-            font-size: 1, 8rem;
-            letter-spacing: .15rem;
-        }
-    }
-}
-
 /* 15. Video popup modal */
 
 .popup-modal {
@@ -1154,21 +830,6 @@ a {
             line-height: 30px;
             width: 30px;
         }
-    }
-}
-
-/* 15.1 Video popup modal: responsive */
-
-@media only screen and (max-width: 800px) {
-    .popup-modal {
-        max-width: 700px;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .popup-modal {
-        margin: 0 20px;
-        width: auto;
     }
 }
 
@@ -1293,20 +954,6 @@ a {
     }
 }
 
-/* 16.1 Process: responsive */
-
-@media only screen and (max-width: 768px) {
-    #process {
-        padding-bottom: 27rem;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    #process {
-        padding-bottom: 21rem;
-    }
-}
-
 /* 17. Projects */
 
 #projects {
@@ -1362,14 +1009,6 @@ a {
             padding-right: 0.5rem;
             padding-top: 0.9rem;
         }
-    }
-}
-
-/* 17.1 Projects: responsive */
-
-@media only screen and (max-width:768px) {
-    .projects-content {
-        max-width: 600px;
     }
 }
 
@@ -1467,28 +1106,6 @@ a {
             color: #fff;
             padding-bottom: 2.4rem;
             position: relative;
-        }
-    }
-}
-
-/* 18.1 Download: responsive */
-
-@media only screen and (max-width: 1140px) {
-    .download-content {
-        max-width: 800px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .download-content {
-        max-width: 420px;
-
-        .bgrid {
-            clear: both !important;
-            float: none !important;
-            margin-left: 0;
-            margin-right: 0;
-            width: 100% !important;
         }
     }
 }
@@ -1667,35 +1284,6 @@ a {
     }
 }
 
-/* 21.1 Case studies: responsive */
-
-@media only screen and (max-width: 1024px) {
-
-    .casestudies-content .bgrid {
-        border-bottom: 1px solid #eee;
-        margin-bottom: 5rem;
-        padding-bottom: 3rem;
-    }
-
-    /*.casestudies-content .with-bottom-line {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .casestudies-content .with-bottom-line::after {
-        display: block;
-        background-color: #632737;
-        width: 120px;
-        height: 3px;
-        content: '\0020';
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        margin-left: -60px;
-    }*/
-}
-
-
 /* 22. FAQs */
 
 #faq {
@@ -1710,26 +1298,6 @@ a {
 
     .bgrid {
         padding: 0 30px;
-    }
-}
-
-/* 22.1 FAQs: responsive */
-
-@media only screen and (max-width: 768px) {
-    .faq-content {
-        max-width: 650px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .faq-content .bgrid {
-        padding: 0 20px;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .faq-content .bgrid {
-        padding: 0;
     }
 }
 
@@ -1878,21 +1446,6 @@ footer {
     }
 }
 
-/* 24.2 Footer: responsive */
-
-@media only screen and (max-width: 768px) {
-    footer .logos img {
-        margin: 0 2%;
-        width: 70px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    footer .logos img {
-        margin: 0 1%;
-        width: 55px;
-    }
-}
 /* 25. Go to top */
 
 #go-top {
@@ -1928,5 +1481,377 @@ footer {
             font-size: 3rem;
             line-height: inherit;
         }
+    }
+}
+
+/* 26. Media queries */
+
+@media only screen and (max-width: 1140px) {
+    .download-content {
+        max-width: 800px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 9.375px;
+    }
+
+    .bgrid {
+        padding: 0 18px;
+    }
+
+    .casestudies-content .bgrid {
+        border-bottom: 1px solid #eee;
+        margin-bottom: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    /*.casestudies-content .with-bottom-line {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .casestudies-content .with-bottom-line::after {
+        display: block;
+        background-color: #632737;
+        width: 120px;
+        height: 3px;
+        content: '\0020';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        margin-left: -60px;
+    }*/
+}
+
+
+@media only screen and (max-width: 800px) {
+    #hero {
+        min-height: 660px;
+    }
+
+    .hero-content {
+        h5 {
+            font-size: 2rem;
+            letter-spacing: .15rem;
+        }
+    }
+
+    .popup-modal {
+        max-width: 700px;
+    }
+}
+
+// Make sure the menu is visible on larger screens
+
+@media only screen and (min-width: 769px) {
+    #main-nav-wrap ul.main-navigation {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+
+    p {
+        &.lead {
+            font-size: 1.7rem;
+        }
+    }
+
+    .bgrid {
+        padding: 0 15px;
+    }
+
+    .section-intro {
+        max-width: 650px;
+
+        h1 {
+            font-size: 4.2rem;
+        }
+    }
+
+    header {
+        padding: 6px 0;
+        top: 0;
+
+        .logo {
+            a {
+                background-size: 38px 38px;
+                height: 38px;
+                width: 38px;
+            }
+        }
+    }
+
+    #main-nav-wrap {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 69px;
+        width: 100%;
+    }
+
+    a {
+        &.menu-toggle {
+            display: block;
+            height: 40px;
+            margin-top: -20px;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            width: 40px;
+
+            span {
+                background-color: #9093b4;
+                bottom: auto;
+                color: transparent;
+                display: block;
+                font: 0px/0 a;  // shorthand property that zeros out the font size
+                                // and line-height. It passes validation
+                height: 3px;
+                left: auto;
+                margin-top: -1.5px;
+                position: absolute;
+                right: 8px;
+                text-shadow: none;
+                top: 50%;
+                -moz-transition: background 0.2s ease-in-out;
+                -o-transition: background 0.2s ease-in-out;
+                -webkit-transition: background 0.2s ease-in-out;
+                -ms-transition: background 0.2s ease-in-out;
+                transition: background 0.2s ease-in-out;
+                width: 24px;
+
+                &::after,
+                &::before {
+                    background-color: inherit;
+                    content: '';
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    -moz-transition-duration: 0.2s, 0.2s;
+                    -o-transition-duration: 0.2s, 0.2s;
+                    -webkit-transition-duration: 0.2s, 0.2s;
+                    -ms-transition-duration: 0.2s, 0.2s;
+                    transition-duration: 0.2s, 0.2s;
+                    -moz-transition-delay: 0.2s, 0s;
+                    -o-transition-delay: 0.2s, 0s;
+                    -webkit-transition-delay: 0.2s, 0s;
+                    -ms-transition-delay: 0.2s, 0s;
+                    transition-delay: 0.2s, 0s;
+                    width: 100%;
+                }
+
+                &::after {
+                    bottom: -8px;
+                    -moz-transition-property: bottom, transform;
+                    -o-transition-property: bottom, transform;
+                    -webkit-transition-property: bottom, transform;
+                    -ms-transition-property: bottom, transform;
+                    transition-property: bottom, transform;
+                }
+
+                &::before {
+                    top: -8px;
+                    -moz-transition-property: top, transform;
+                    -o-transition-property: top, transform;
+                    -webkit-transition-property: top, transform;
+                    -ms-transition-property: top, transform;
+                    transition-property: top, transform;  
+                }
+            }
+        }
+
+        &.is-clicked {
+            span {
+                background-color: rgba(255, 255, 255, 0);
+
+                &::after,
+                &::before {
+                    background-color: white;
+                    -moz-transition-delay: 0s, 0.2s;
+                    -o-transition-delay: 0s, 0.2s;
+                    -webkit-transition-delay: 0s, 0.2s;
+                    -ms-transition-delay: 0s, 0.2s;
+                    transition-delay: 0s, 0.2s;
+                }
+
+                &::after {
+                    bottom: 0;
+                    -webkit-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+
+                &::before {
+                    top: 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);                    
+                }
+            }
+        }
+    }
+
+    .main-navigation {
+        background: #14171c;
+        clear: both;
+        display: none;
+        height: auto;
+        margin: 0;
+        padding: 48px 42px 54px;
+        width: 100%;
+
+        a {
+            border: none;
+            color: #e6e6e6;
+            display: block;
+            line-height: 16px;
+            padding: 18px 0;
+            width: auto;
+
+            &:hover {
+                color: #ff7b29;
+            }         
+        }
+
+        li {
+            &.current > a {
+                background: none;
+                color: #ff7b29;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            &.with-sep {
+                a {
+                    margin-left: 0;
+                    padding-left: 0;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-navigation > li {
+        border-bottom: 1px dotted rgba(200, 200, 200, 0.08);
+        display: block;
+        height: auto;
+        padding: 0;
+        text-align: left;
+
+        &:first-child {
+            border-top: 1px dotted rgba(200, 200, 200, 0.08);
+        }
+    }
+
+    #process {
+        padding-bottom: 27rem;
+    }
+
+    .projects-content {
+        max-width: 600px;
+    }
+
+    .faq-content {
+        max-width: 650px;
+    }
+
+    footer .logos img {
+        margin: 0 2%;
+        width: 70px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1,
+    .h01 {
+        font-size: 2.6rem;
+        letter-spacing: -.07rem;
+    }
+
+    .bgrid {
+        padding: 0 10px;
+    }
+
+    .section-intro {
+        h1 {
+            font-size: 3.8rem;
+        }
+
+        h5 {
+            font-size: 1.5rem;
+            letter-spacing: .3rem;
+        }
+    }
+
+    .download-content {
+        max-width: 420px;
+
+        .bgrid {
+            clear: both !important;
+            float: none !important;
+            margin-left: 0;
+            margin-right: 0;
+            width: 100% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .faq-content .bgrid {
+        padding: 0 20px;
+    }
+
+    footer .logos img {
+        margin: 0 1%;
+        width: 55px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 9.375px;
+    }
+
+    .bgrid {
+        padding: 0;
+    }
+
+    .section-intro h1 {
+        font-size: 3.6rem;
+    }
+
+    #hero {
+        min-height: 550px;
+    }
+
+    .hero-content {
+         h5 {
+            font-size: 1, 8rem;
+            letter-spacing: .15rem;
+        }
+    }
+
+    .popup-modal {
+        margin: 0 20px;
+        width: auto;
+    }
+
+    #process {
+        padding-bottom: 21rem;
+    }
+
+    .faq-content .bgrid {
+        padding: 0;
     }
 }
