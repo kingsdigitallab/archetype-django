@@ -56,6 +56,14 @@ body {
     line-height: 3rem;
 }
 
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
 /* 3. Links */
 
 a,
@@ -452,11 +460,6 @@ input[type="button"] {
             width: 120px;
         }
     }
-}
-
-.testimonials-content.insert {
-    background: #f5f5f5;
-    padding:0;
 }
 
 /* 12. Header */
@@ -1186,6 +1189,11 @@ a {
             width: 16rem;
         }
     }
+
+    &.insert {
+        background: #f5f5f5;
+        padding: 0;
+    }
 }
 
 /* 20. Additional */
@@ -1506,23 +1514,6 @@ footer {
         margin-bottom: 5rem;
         padding-bottom: 3rem;
     }
-
-    /*.casestudies-content .with-bottom-line {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .casestudies-content .with-bottom-line::after {
-        display: block;
-        background-color: #632737;
-        width: 120px;
-        height: 3px;
-        content: '\0020';
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        margin-left: -60px;
-    }*/
 }
 
 
@@ -1552,48 +1543,6 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    html {
-        font-size: 10px;
-    }
-
-    p {
-        &.lead {
-            font-size: 1.7rem;
-        }
-    }
-
-    .bgrid {
-        padding: 0 15px;
-    }
-
-    .section-intro {
-        max-width: 650px;
-
-        h1 {
-            font-size: 4.2rem;
-        }
-    }
-
-    header {
-        padding: 6px 0;
-        top: 0;
-
-        .logo {
-            a {
-                background-size: 38px 38px;
-                height: 38px;
-                width: 38px;
-            }
-        }
-    }
-
-    #main-nav-wrap {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 69px;
-        width: 100%;
-    }
 
     a {
         &.menu-toggle {
@@ -1697,6 +1646,44 @@ footer {
         }
     }
 
+    .bgrid {
+        padding: 0 15px;
+    }
+
+    .faq-content {
+        max-width: 650px;
+    }
+
+    footer .logos img {
+        margin: 0 2%;
+        width: 70px;
+    }
+
+    header {
+        padding: 6px 0;
+        top: 0;
+
+        .logo {
+            a {
+                background-size: 38px 38px;
+                height: 38px;
+                width: 38px;
+            }
+        }
+    }
+
+    html {
+        font-size: 10px;
+    }
+
+    #main-nav-wrap {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 69px;
+        width: 100%;
+    }
+
     .main-navigation {
         background: #14171c;
         clear: both;
@@ -1754,6 +1741,12 @@ footer {
         }
     }
 
+    p {
+        &.lead {
+            font-size: 1.7rem;
+        }
+    }
+
     #process {
         padding-bottom: 27rem;
     }
@@ -1762,36 +1755,30 @@ footer {
         max-width: 600px;
     }
 
-    .faq-content {
+    .section-intro {
         max-width: 650px;
+
+        h1 {
+            font-size: 4.2rem;
+        }
     }
 
-    footer .logos img {
-        margin: 0 2%;
-        width: 70px;
+    .testimonials-content {
+        .avatar,
+        .col-1-4 {
+            float: left;
+        }
+
+        .col-3-4 {
+            float: right;
+        }
     }
 }
 
 @media only screen and (max-width: 600px) {
-    h1,
-    .h01 {
-        font-size: 2.6rem;
-        letter-spacing: -.07rem;
-    }
 
     .bgrid {
         padding: 0 10px;
-    }
-
-    .section-intro {
-        h1 {
-            font-size: 3.8rem;
-        }
-
-        h5 {
-            font-size: 1.5rem;
-            letter-spacing: .3rem;
-        }
     }
 
     .download-content {
@@ -1805,6 +1792,23 @@ footer {
             width: 100% !important;
         }
     }
+
+    h1,
+    .h01 {
+        font-size: 2.6rem;
+        letter-spacing: -.07rem;
+    }
+
+    .section-intro {
+        h1 {
+            font-size: 3.8rem;
+        }
+
+        h5 {
+            font-size: 1.5rem;
+            letter-spacing: .3rem;
+        }
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1816,19 +1820,20 @@ footer {
         margin: 0 1%;
         width: 55px;
     }
+
+    .hero-content {
+        padding-top: 72px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
-    html {
-        font-size: 9.375px;
-    }
 
     .bgrid {
         padding: 0;
     }
 
-    .section-intro h1 {
-        font-size: 3.6rem;
+    .faq-content .bgrid {
+        padding: 0;
     }
 
     #hero {
@@ -1842,6 +1847,10 @@ footer {
         }
     }
 
+    html {
+        font-size: 9.375px;
+    }
+
     .popup-modal {
         margin: 0 20px;
         width: auto;
@@ -1851,7 +1860,7 @@ footer {
         padding-bottom: 21rem;
     }
 
-    .faq-content .bgrid {
-        padding: 0;
+    .section-intro h1 {
+        font-size: 3.6rem;
     }
 }
