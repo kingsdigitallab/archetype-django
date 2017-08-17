@@ -1,9 +1,11 @@
+{% load staticfiles %}
+
 <div class="row">
   <div class="col-twelve logos">
-    <a href="www.google.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/King%27s_College_London_Digital_Humanities.png" alt="KCL"></a>
-    <a href="www.google.com" target="_blank"><img src="http://globhealth.vjf.cnrs.fr/images/ERC_Logo.png" alt="ERC"></a>
-    <a href="www.google.com" target="_blank"><img src="http://www.dos.com.pl/inc/images/unia/unia.png" alt="Europa"></a>
-    <a href="www.google.com" target="_blank"><img src="http://vbrant.eu/sites/vbrant.eu/files/FP7-LG.png" alt="FP7"></a>
+    <a href="//kdl.kcl.ac.uk/"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/King%27s_College_London_Digital_Humanities.png" alt="KCL"></a>
+    <a href="//erc.europa.eu/"><img src="{% static 'images/eu-flag-erc-rgb.svg' %}" alt="ERC"></a>
+    <a href="//www.ahrc.ac.uk/"><img src="{% static 'images/AHRC_rgb.png' %}" alt="AHRC"></a>
+    <a href="www.google.com"><img src="http://vbrant.eu/sites/vbrant.eu/files/FP7-LG.png" alt="FP7"></a>
   </div>
 </div>
 
