@@ -1596,7 +1596,7 @@ footer {
     }
 
     a {
-        .menu-toggle {
+        &.menu-toggle {
             display: block;
             height: 40px;
             margin-top: -20px;
