@@ -2,7 +2,7 @@
     "name": "archetype",
     "version": "0.1",
     "dependencies": {
-        
+        "font-awesome": null,
         "jquery": null
     },
     "main": "assets/js/main.js",
