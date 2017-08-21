@@ -1443,9 +1443,10 @@ footer {
         text-align: center;
 
         img {
-            margin: 0 1%;
-            vertical-align: top;
+            margin: 15px 30px;
+            max-height: 90px;
             max-width: 200px;
+            vertical-align: middle;
 
             &:hover{
                 opacity: 0.7;
@@ -1654,9 +1655,12 @@ footer {
         max-width: 650px;
     }
 
-    footer .logos img {
-        margin: 0 2%;
-        width: 70px;
+    footer {
+        .logos {
+            img {
+                max-width: 150px;                
+            }
+        }
     }
 
     header {
@@ -1814,11 +1818,6 @@ footer {
 @media only screen and (max-width: 480px) {
     .faq-content .bgrid {
         padding: 0 20px;
-    }
-
-    footer .logos img {
-        margin: 0 1%;
-        width: 55px;
     }
 
     .hero-content {
