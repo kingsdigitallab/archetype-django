@@ -22,7 +22,10 @@
   <link rel="stylesheet" href="{% static "scss/base.css" %}">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  
+  <!-- favicons -->
+  {% include 'includes/favicon.html' %}
+  <!-- <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}"> -->
 
   {% compress css %}
     <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}">
@@ -30,9 +33,6 @@
   
   <!-- script  -->
   <script src="{% static "js/modernizr.js" %}"></script>
-  
-  <!-- favicons -->
-  <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
   
 </head>
 <body id="top">
