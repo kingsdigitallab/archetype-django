@@ -3,7 +3,7 @@
     "version": "0.1",
     "dependencies": {
         "font-awesome": null,
-        "jquery": null
+        "jquery": "1.12.4"
     },
     "main": "assets/js/main.js",
     "ignore": [

@@ -446,9 +446,7 @@ input[type="button"] {
     .with-bottom-line {
         overflow: hidden;
         position: relative;
-    }
 
-    .with-bottom-line::after {
         &::after {
             background-color: #632737;
             bottom: 0;
