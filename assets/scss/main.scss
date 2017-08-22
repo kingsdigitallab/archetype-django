@@ -82,6 +82,16 @@ a:hover {
     color: #632737;
 }
 
+body {
+    &.not-home {
+        a {
+            &:hover {
+                color: #632737 !important;
+            }
+        }
+    }
+}
+
 /* 4. Typography */
 
 .center {
@@ -164,6 +174,14 @@ h6,
     text-transform: uppercase;
 }
 
+hr {
+    border: solid #cfcfd5;
+    border-width: 1px 0 0;
+    clear: both;
+    height: 0;
+    margin: 2.4rem 0 1.5rem;
+}
+
 p {
     text-align: justify;
 
@@ -180,12 +198,11 @@ p {
     }
 }
 
-hr {
-    border: solid #cfcfd5;
-    border-width: 1px 0 0;
-    clear: both;
-    height: 0;
-    margin: 2.4rem 0 1.5rem;
+span {
+    &.kdl {
+        font-family: "KingsBureauGrot", sans-serif;
+        font-size: 1.5rem;
+    }
 }
 
 /* 5. Spacing */
@@ -1044,6 +1061,7 @@ a {
         .additional {
             color: rgba(255, 255, 255, 0.5);
             line-height: 1.8rem;
+            margin-top: 0;
 
             a {
                 color: rgba(255, 255, 255, 0.5);
@@ -1197,17 +1215,11 @@ a {
 
 /* 20. Additional */
 
-.additional {
-    border-top: 1px dotted rgba(0, 0, 0, 0.1);
-    margin-top: 4.8rem;
-    max-width: 650px;
-    padding-top: 6rem;
-    text-align: center;
-}
-
-
+.additional,
 .additional-content {
     border-top: 1px dotted rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 4.8rem;
     max-width: 650px;
     padding-top: 6rem;
