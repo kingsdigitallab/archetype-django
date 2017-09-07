@@ -340,7 +340,6 @@ input[type="url"],
 textarea,
 select {
     background: #fff;
-    // border: 0; Which one?
     border: 1px solid #d5d5d5;
     border-radius: 3px;
     color: #737373;
@@ -734,19 +733,12 @@ a {
 
             &.current {
                 a {
-                    // color: #9093b4;
 
                     &::after {
                         background-color: #9093b4;
                     }
                 }
             }
-
-            // &.highlight {
-            //     a {
-            //         color: #9093b4;
-            //     }
-            // }
         }
     }
 }
@@ -1122,7 +1114,6 @@ a {
         .one,
         .two {
             color: #fff;
-            // padding-bottom: 2.4rem;
             position: relative;
         }
 
@@ -1134,7 +1125,6 @@ a {
         .title {
             color: #fff;
             font-size: 2.4rem;
-            // margin-bottom: 1.2rem;
             margin-bottom: 3rem;
             padding-bottom: 2.4rem;
             position: relative;
@@ -1246,13 +1236,10 @@ a {
 
 .additional,
 .additional-content {
-    // border-top: 1px dotted rgba(0, 0, 0, 0.1);
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    // margin-top: 4.8rem;
     max-width: 650px;
-    // padding-top: 6rem;
     padding-top: 2rem;
     text-align: center;
 }
