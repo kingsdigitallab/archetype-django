@@ -53,8 +53,9 @@ body {
 body {
     background: #14181e;
     color: #737373;
-    font-family: "merriweather-regular", serif;
+    font-family: "Merriweather", serif;
     font-size: 1.6rem;
+    font-weight: 400;
     line-height: 3rem;
 }
 
@@ -121,8 +122,8 @@ h6,
 .h05,
 .h06 {
     color: #252525;
-    font-family: "raleway-bold", sans-serif;
-    font-style: normal;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
     margin-bottom: 2.1rem;
     text-rendering: optimizeLegibility;
 }
@@ -138,7 +139,8 @@ h5,
 h6,
 .h05,
 .h06 {
-    font-family: "raleway-heavy";
+    font-family: "Raleway";
+    font-weight: 800;
     margin-bottom: 1.2rem;
 }
 
@@ -196,8 +198,9 @@ p {
 
     &.lead {
         color: #737373;
-        font-family: "merriweather-light", serif;
+        font-family: "Merriweather", serif;
         font-size: 1.8rem;
+        font-weight: 300;
         line-height: 1.8;
         text-align: center;
     }
@@ -342,8 +345,9 @@ select {
     border-radius: 3px;
     color: #737373;
     display: block;
-    font-family: "merriweather-regular", sans-serif;
+    font-family: "Merriweather", sans-serif;
     font-size: 1.5rem;
+    font-weight: normal;
     height: 6rem;
     line-height: 3rem;
     max-width: 100%;
@@ -367,8 +371,9 @@ label,
 legend {
     color: #404040;
     display: block;
-    font-family: "merriweather-bold", sans-serif;
+    font-family: "Merriweather", sans-serif;
     font-size: 1.4rem;
+    font-weight: 700;
     margin-bottom: .6rem;
 
     span {
@@ -411,8 +416,9 @@ input[type="button"] {
     color: #6e5867;
     cursor: pointer;
     display: inline-block;
-    font-family: "raleway-bold", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 1.6rem;
+    font-weight: bold;
     height: 6rem;
     line-height: 6rem;
     margin: 0 .3rem 1rem 0;
@@ -455,8 +461,9 @@ input[type="button"] {
 
     h1 {
         color: #252525;
-        font-family: "merriweather-bold", serif;
+        font-family: "Merriweather", serif;
         font-size: 4.8rem;
+        font-weight: bold;
         line-height: 1.25;
         margin-bottom: 1.2rem;
     }
@@ -580,8 +587,9 @@ a {
 /* 13.2 Main-nav-wrap */
 
 #main-nav-wrap {
-    font-family: "raleway-heavy", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 11.5px;
+    font-weight: 800;
     letter-spacing: 1.5px;
     position: absolute;
     right: 30px;
@@ -779,8 +787,9 @@ a {
 
     h5 {
         color: #fff;
-        font-family: "merriweather-bold", serif;
+        font-family: "Merriweather", serif;
         font-size: 2.8rem;
+        font-weight: bold;
         letter-spacing: .25rem;
         line-height: 1.667;
         margin-bottom: 0.6rem;
@@ -802,8 +811,9 @@ a {
         background: transparent;
         border: 3px solid;
         color: #9093b4;
-        font-family: "raleway-heavy", sans-serif;
+        font-family: "Raleway", sans-serif;
         font-size: 1.4rem;
+        font-weight: 800;
         height: 6.6rem;
         letter-spacing: .4rem;
         line-height: 6rem;
@@ -896,8 +906,9 @@ a {
 
     h3 {
         color: #6e5867;
-        font-family: "raleway-heavy";
+        font-family: "Raleway";
         font-size: 1.7rem;
+        font-weight: 800;
         letter-spacing: .15rem;
         line-height: 1.765;
         margin-bottom: 1.8rem;
@@ -955,8 +966,9 @@ a {
 
     h3 {
         color: #632737;
-        font-family: "raleway-heavy";
+        font-family: "Raleway";
         font-size: 1.7rem;
+        font-weight: 800;
         letter-spacing: .15rem;
         line-height: 1.765;
         margin-bottom: 1.8rem;
@@ -1026,8 +1038,9 @@ a {
 
     h3 {
         color: #9093b4;
-        font-family: "raleway-heavy";
+        font-family: "Raleway";
         font-size: 1.7rem;
+        font-weight: 800;
         line-height: 1.765;
         margin-bottom: 1.8rem;
         text-transform: uppercase;
@@ -1172,8 +1185,9 @@ a {
     h6 {
         color: rgba(0, 0, 0, 0.4);
         display: block;
-        font-family: "raleway-semibold", sans-serif;
+        font-family: "Raleway", sans-serif;
         font-size: 1.4rem;
+        font-weight: 600;
         letter-spacing: 0;
         line-height: 2.1rem;
         text-transform: none;
@@ -1281,8 +1295,9 @@ a {
 
     h3 {
         color: #6e5867;
-        font-family: "raleway-heavy";
+        font-family: "Raleway";
         font-size: 1.7rem;
+        font-weight: 800;
         line-height: 1.765;
         margin-bottom: 1.8rem;
         text-transform: uppercase;
@@ -1444,7 +1459,8 @@ a {
 footer {
     background: #eee;
     color: #5c5c5c;
-    font-family: "raleway-medium", sans-serif;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
     margin: 0 auto;
     padding: 3rem 0;
 
