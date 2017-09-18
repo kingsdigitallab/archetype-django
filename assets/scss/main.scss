@@ -2,6 +2,7 @@
 
 /* Table of contents
  *
+ * 0. ----- Variables - Colours
  * 1. ----- Webfonts and iconfonts
  * 2. ----- Base style overrides
  * 3. ----- Links
@@ -33,6 +34,24 @@
  * 27. ---- Media queries
 */
 
+/* 0. Variables */
+
+// Colours
+$almost-black: #252525;
+$black: #000000;
+$blue-gray: #38424e;
+$bordeaux: #632737;
+$dark-bordeaux: #240f14;
+$light-bordeaux: #6e5867;
+$dark-blue: #14181e;
+$dark-gray: #737373;
+$light-blue: #9093b4;
+$almost-white: #eee;
+$white-ish: #f5f5f5;
+$white: #fff;
+
+
+
 
 /* 1. Webfonts and iconfonts */
 
@@ -51,8 +70,8 @@ body {
 }
 
 body {
-    background: #14181e;
-    color: #737373;
+    background: $dark-blue;
+    color: $dark-gray;
     font-family: "Merriweather", serif;
     font-size: 1.6rem;
     font-weight: 400;
@@ -79,7 +98,7 @@ body {
 
 a,
 a:visited {
-    color: #9093b4;
+    color: $light-blue;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -89,14 +108,14 @@ a:visited {
 
 a:focus,
 a:hover {
-    color: #632737;
+    color: $bordeaux;
 }
 
 body {
     &.not-home {
         a {
             &:hover {
-                color: #632737 !important;
+                color: $bordeaux !important;
             }
         }
     }
@@ -121,7 +140,7 @@ h6,
 .h04,
 .h05,
 .h06 {
-    color: #252525;
+    color: $almost-black;
     font-family: "Raleway", sans-serif;
     font-weight: bold;
     margin-bottom: 2.1rem;
@@ -197,7 +216,7 @@ p {
     text-align: justify;
 
     &.lead {
-        color: #737373;
+        color: $dark-gray;
         font-family: "Merriweather", serif;
         font-size: 1.8rem;
         font-weight: 300;
@@ -225,7 +244,7 @@ button,
     margin-bottom: 1.2;
 
     &.reverse {
-        background: #9093b4;
+        background: $light-blue;
     }
 }
 
@@ -263,7 +282,7 @@ span {
 /* 7. Preloader */
 
 #preloader {
-    background: #0F1215;
+    background: #0f1215;
     bottom: 0;
     height: 100%;
     left: 0;
@@ -282,7 +301,7 @@ span {
 #loader {
     -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
     animation: sk-scaleout 1.0s infinite ease-in-out;
-    border-bottom: solid 60px #632737;
+    border-bottom: solid 60px $bordeaux;
     border-left: solid 30px transparent;
     border-right: solid 30px transparent;
     height: 80px;
@@ -339,10 +358,10 @@ input[type="text"],
 input[type="url"],
 textarea,
 select {
-    background: #fff;
+    background: $white;
     border: 1px solid #d5d5d5;
     border-radius: 3px;
-    color: #737373;
+    color: $dark-gray;
     display: block;
     font-family: "Merriweather", sans-serif;
     font-size: 1.5rem;
@@ -376,7 +395,7 @@ legend {
     margin-bottom: .6rem;
 
     span {
-        color: #632737;
+        color: $bordeaux;
     }
 }
 
@@ -412,7 +431,7 @@ input[type="reset"],
 input[type="button"] {
     background: transparent;
     border: 2px solid;
-    color: #6e5867;
+    color: $light-bordeaux;
     cursor: pointer;
     display: inline-block;
     font-family: "Raleway", sans-serif;
@@ -433,13 +452,13 @@ input[type="button"] {
 
     &:hover {
         background: transparent;
-        color: #fff;
+        color: $white;
         outline: 0;
     }
 
     &.button-primary {
-        background: #632737;
-        color: #fff;
+        background: $bordeaux;
+        color: $white;
 
         &:hover,
         &:focus {
@@ -459,7 +478,7 @@ input[type="button"] {
     text-align: center;
 
     h1 {
-        color: #252525;
+        color: $almost-black;
         font-family: "Merriweather", serif;
         font-size: 4.8rem;
         font-weight: bold;
@@ -468,7 +487,7 @@ input[type="button"] {
     }
 
     h5 {
-        color: rgba(56, 66, 78, 0.5);
+        color: rgba($blue-gray, 0.5);
         font-size: 1.6rem;
         letter-spacing: .4rem;
         line-height: 1.875;
@@ -476,7 +495,7 @@ input[type="button"] {
     }
 
     .lead {
-        color: rgba(0, 0, 0, 0.45);
+        color: rgba($black, 0.45);
     }
 
     .with-bottom-line {
@@ -484,7 +503,7 @@ input[type="button"] {
         position: relative;
 
         &::after {
-            background-color: #632737;
+            background-color: $bordeaux;
             bottom: 0;
             content: '\0020';
             display: block;
@@ -551,7 +570,7 @@ header {
 }
 
 .sticky {
-    background: #eee;
+    background: $almost-white;
     position: fixed;
     top: 0;
 
@@ -604,10 +623,10 @@ a {
 
     a {
         .current {
-            color: #9093b4;
+            color: $light-blue;
 
             &::after {
-                background-color: #9093b4;
+                background-color: $light-blue;
                 bottom: 20%;
                 content: '\0020';
                 display: block;
@@ -650,16 +669,16 @@ a {
             transition: color 0.3s ease-in-out;
 
             &:hover {
-                color: #fff;
+                color: $white;
             }
         }
 
         &.current {
             a {
-                color: #9093b4;
+                color: $light-blue;
 
                 &::after {
-                    background-color: #9093b4;
+                    background-color: $light-blue;
                     bottom: 20%;
                     content: '\0020';
                     display: block;
@@ -682,7 +701,7 @@ a {
 
         &.highlight {
             a {
-                color: #9093b4;
+                color: $light-blue;
             }
         }
 
@@ -725,9 +744,9 @@ a {
         li {
 
             a {
-                color: #9093b4;
+                color: $light-blue;
                 &:hover {
-                    color: #632737;
+                    color: $bordeaux;
                 }
             }
 
@@ -735,7 +754,7 @@ a {
                 a {
 
                     &::after {
-                        background-color: #9093b4;
+                        background-color: $light-blue;
                     }
                 }
             }
@@ -746,7 +765,7 @@ a {
 /* 14. Hero */
 
 #hero {
-    background: rgba(36, 15, 20, 0.8);
+    background: rgba($dark-bordeaux, 0.8);
     display: table;
     height: 100%;
     min-height: 720px;
@@ -754,7 +773,7 @@ a {
     width: 100%;
 
     &:after {
-        background: #14181e url("/static/images/background-hero.png") no-repeat center;
+        background: $dark-blue url("/static/images/background-hero.png") no-repeat center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -778,7 +797,7 @@ a {
     vertical-align: middle;
 
     h5 {
-        color: #fff;
+        color: $white;
         font-family: "Merriweather", serif;
         font-size: 2.8rem;
         font-weight: bold;
@@ -794,7 +813,7 @@ a {
             font-size: 3rem;
 
             &:hover {
-                color: #9093b4;
+                color: $light-blue;
             }
         }
     }
@@ -802,7 +821,7 @@ a {
     .button {
         background: transparent;
         border: 3px solid;
-        color: #9093b4;
+        color: $light-blue;
         font-family: "Raleway", sans-serif;
         font-size: 1.4rem;
         font-weight: 800;
@@ -816,8 +835,8 @@ a {
 
         &:focus,
         &:hover {
-            background: #9093b4 !important;
-            border-color: #9093b4;
+            background: $light-blue !important;
+            border-color: $light-blue;
             color: #444;
         }
     }
@@ -834,14 +853,14 @@ a {
 /* 15. Video popup modal */
 
 .popup-modal {
-    background: #fff;
+    background: $white;
     margin: 0 auto;
     max-width: 800px;
     position: relative;
 
     .close-popup {
         color: transparent;                 // Which one???
-        color: rgba(255, 255, 255, 0.5);    // Which one???
+        color: rgba($white, 0.5);    // Which one???
         cursor: pointer;
         display: block;
         font: 0px/0 a;  // shorthand property that zeros out the font size
@@ -855,7 +874,7 @@ a {
         width: 30px;
 
         &::before {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba($white, 0.5);
             content: "\f2d7";
             display: block;
             font-family: "Ionicons";
@@ -870,7 +889,7 @@ a {
 /* About */
 
 #about {
-    background: #fff;
+    background: $white;
     overflow: hidden;
     padding-top: 12rem;
     padding-bottom: 15rem;
@@ -880,14 +899,14 @@ a {
     text-align: center;
 
     .button:focus {
-        background: #9093b4 !important;
-        border-color: #9093b4;
+        background: $light-blue !important;
+        border-color: $light-blue;
         color: #444;
     }
 
     .testimonials-content {
         &.insert {
-            background: #f5f5f5;
+            background: $white-ish;
             padding: 5rem 0 0;
         }
     }
@@ -897,7 +916,7 @@ a {
     margin-top: 7rem;
 
     h3 {
-        color: #6e5867;
+        color: $light-bordeaux;
         font-family: "Raleway";
         font-size: 1.7rem;
         font-weight: 800;
@@ -928,7 +947,7 @@ a {
 /* 16. Process */
 
 #process {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba($white, 0.95);
     display: table;
     height: 100%;
     min-height: 720px;
@@ -938,7 +957,7 @@ a {
     width: 100%;
 
     &::after {
-        background: #14181E url(https://previews.123rf.com/images/alephcomo/alephcomo1203/alephcomo120300206/12847158-ancient-manuscript-old-paper-background-Stock-Photo.jpg) no-repeat center;
+        background: $dark-blue url(https://previews.123rf.com/images/alephcomo/alephcomo1203/alephcomo120300206/12847158-ancient-manuscript-old-paper-background-Stock-Photo.jpg) no-repeat center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -957,7 +976,7 @@ a {
     text-align: justify;
 
     h3 {
-        color: #632737;
+        color: $bordeaux;
         font-family: "Raleway";
         font-size: 1.7rem;
         font-weight: 800;
@@ -1008,16 +1027,16 @@ a {
         }
 
         h5 {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba($white, 0.5);
         }
 
         p {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba($white, 0.7);
         }
 
         .with-bottom-line {
             &::after {
-                background-color: #9093b4;
+                background-color: $light-blue;
             }
         }
     }
@@ -1029,7 +1048,7 @@ a {
     text-align: center;
 
     h3 {
-        color: #9093b4;
+        color: $light-blue;
         font-family: "Raleway";
         font-size: 1.7rem;
         font-weight: 800;
@@ -1052,7 +1071,7 @@ a {
 /* 18. Download section */
 
 #download {
-    background: #f5f5f5;
+    background: $white-ish;
     padding-bottom: 9.6rem;
     padding-top: 12rem;
 }
@@ -1066,8 +1085,8 @@ a {
     }
 
     .block {
-        background-color: #fff;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        background-color: $white;
+        box-shadow: 0 1px 2px rgba($black, 0.1);
         margin: 0 auto;
         max-width: 800px;
         overflow: hidden;
@@ -1077,12 +1096,12 @@ a {
         }
 
         .additional {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba($white, 0.5);
             line-height: 1.8rem;
             margin-top: 0;
 
             a {
-                color: rgba(255, 255, 255, 0.5);
+                color: rgba($white, 0.5);
                 line-height: 1.8rem;
 
                 &:hover {
@@ -1094,26 +1113,26 @@ a {
         .button {
             background: none;
             border: 2px solid;
-            color: #fff;
+            color: $white;
             margin-left: auto;
             margin-right: auto;
             padding: 0 5rem;
 
             &:focus,
             &:hover {
-                background: #fff;
-                border-color: #fff;
+                background: $white;
+                border-color: $white;
                 color: #444;
             }
         }
 
         .one {
-            background: #6e5867;
+            background: $light-bordeaux;
         }
 
         .one,
         .two {
-            color: #fff;
+            color: $white;
             position: relative;
         }
 
@@ -1123,14 +1142,14 @@ a {
         }
 
         .title {
-            color: #fff;
+            color: $white;
             font-size: 2.4rem;
             margin-bottom: 3rem;
             padding-bottom: 2.4rem;
             position: relative;
 
             &::after {
-                background-color: rgba(255, 255, 255, 0.3);
+                background-color: rgba($white, 0.3);
                 bottom: 0;
                 content: '\0020';
                 display: block;
@@ -1151,7 +1170,7 @@ a {
 /* 19. Testimonials */
 
 #testimonials {
-    background: #fff;
+    background: $white;
     min-height: 20.4rem;
     overflow: hidden;
     padding-bottom: 12rem;
@@ -1173,7 +1192,7 @@ a {
     }
 
     h6 {
-        color: rgba(0, 0, 0, 0.4);
+        color: rgba($black, 0.4);
         display: block;
         font-family: "Raleway", sans-serif;
         font-size: 1.4rem;
@@ -1184,13 +1203,13 @@ a {
     }
 
     p {
-        background-color: #f5f5f5;
+        background-color: $white-ish;
         font-style: italic;
         padding: 5rem;
 
         &::after,
         &::before {
-            color: #9093b4;
+            color: $light-blue;
             display: inline;
             font-family: "Times New Roman", Times, serif;
             font-size: 6rem;
@@ -1227,7 +1246,7 @@ a {
     }
 
     &.insert {
-        background: #f5f5f5;
+        background: $white-ish;
         padding: 0;
     }
 }
@@ -1252,12 +1271,12 @@ a {
     padding-top: 12rem;
 
     #contact {
-        background: #fff;
+        background: $white;
         padding: 0;
     }
 
     #download {
-        background: #fff;
+        background: $white;
         padding: 0;
     }
 }
@@ -1268,20 +1287,20 @@ a {
 
     a {
         &.button {
-            background: #9093b4;
-            border: 2px solid #9093b4;
-            color: #fff;
+            background: $light-blue;
+            border: 2px solid $light-blue;
+            color: $white;
 
             &:hover {
                 background: transparent;
                 border: 2px solid;
-                color: #9093b4;
+                color: $light-blue;
             }
         }
     }
 
     h3 {
-        color: #6e5867;
+        color: $light-bordeaux;
         font-family: "Raleway";
         font-size: 1.7rem;
         font-weight: 800;
@@ -1310,12 +1329,12 @@ a {
 
     .testimonials-content {
         &.insert {
-            background: #f5f5f5;
+            background: $white-ish;
             margin: 0 0 5rem 0;
             padding: 0;
 
             p {
-                background: #f5f5f5;
+                background: $white-ish;
                 padding: 4rem 3rem 1rem;
             }
         }
@@ -1325,7 +1344,7 @@ a {
 /* 22. FAQs */
 
 #faq {
-    background: #fff;
+    background: $white;
     padding-bottom: 12rem;
     padding-top: 12rem;
 }
@@ -1342,12 +1361,12 @@ a {
 /* 23. Contact */
 
 #contact {
-    background: #f5f5f5;
+    background: $white-ish;
     padding-bottom: 12rem;
     padding-top: 12rem;
 
     h6 {
-        color: #6e5867;
+        color: $light-bordeaux;
         line-height: 0.5rem;
     }
 
@@ -1356,12 +1375,12 @@ a {
         button[type="submit"] {
             background: transparent;
             border: 2px solid;
-            color: #6e5867;
+            color: $light-bordeaux;
 
             &:hover {
-                background: #6e5867;
-                border: 2px solid #6e5867;
-                color: #fff;
+                background: $light-bordeaux;
+                border: 2px solid $light-bordeaux;
+                color: $white;
             }
         }
 
@@ -1390,8 +1409,8 @@ a {
         }
 
         #sendmessage {
-            border: 1px solid #632737;
-            color: #632737;
+            border: 1px solid $bordeaux;
+            color: $bordeaux;
             display: none;
             font-weight: 600;
             margin-bottom: 15px;
@@ -1420,17 +1439,17 @@ a {
             color: #333333;
 
             &:hover{
-                color: #632737;
+                color: $bordeaux;
             }
         }   
 
         i {
-            color: #6e5867;
+            color: $light-bordeaux;
             float: left;
             font-size: 32px;
 
             &:hover {
-                color: #632737;
+                color: $bordeaux;
             }
         }
 
@@ -1444,7 +1463,7 @@ a {
 /* 24. Footer */
 
 footer {
-    background: #eee;
+    background: $almost-white;
     color: #5c5c5c;
     font-family: "Raleway", sans-serif;
     font-weight: 500;
@@ -1498,7 +1517,7 @@ footer {
     a {
         background: #d8d8d8;
         border: 0 none;
-        color: #fff;
+        color: $white;
         display: block;
         height: 66px;
         line-height: 66px;
@@ -1513,8 +1532,8 @@ footer {
         width: 60px;
 
         &:hover {
-            background: #9093b4;
-            color: #fff;
+            background: $light-blue;
+            color: $white;
         }
 
         i {
@@ -1526,7 +1545,7 @@ footer {
 /* 26. Cookies */
 
 .cookies-box {
-    background: rgba(0, 0, 0, .8);
+    background: rgba($black, .8);
     bottom: 0;
     color: white;
     margin: 0;
@@ -1549,7 +1568,7 @@ footer {
     }
     
     button {
-        background: #6e5867 !important;
+        background: $light-bordeaux !important;
         height: 3rem;
         line-height: 1rem;
         margin-top: .5rem;
@@ -1565,7 +1584,7 @@ footer {
     .small {
         text-decoration: underline;
         &:hover {
-            color: #9093b4;
+            color: $light-blue;
         }
     }
 }
@@ -1588,7 +1607,7 @@ footer {
     }
 
     .casestudies-content .bgrid {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid $almost-white;
         margin-bottom: 5rem;
         padding-bottom: 3rem;
     }
@@ -1633,7 +1652,7 @@ footer {
             width: 40px;
 
             span {
-                background-color: #9093b4;
+                background-color: $light-blue;
                 bottom: auto;
                 color: transparent;
                 display: block;
@@ -1695,11 +1714,11 @@ footer {
 
         &.is-clicked {
             span {
-                background-color: rgba(255, 255, 255, 0);
+                background-color: rgba($white, 0);
 
                 &::after,
                 &::before {
-                    background-color: white;
+                    background-color: $white;
                     -moz-transition-delay: 0s, 0.2s;
                     -o-transition-delay: 0s, 0.2s;
                     -webkit-transition-delay: 0s, 0.2s;
