@@ -673,7 +673,8 @@ a {
             }
         }
 
-        &.current {
+        &.current,
+        &.active {
             a {
                 color: $light-blue;
 
@@ -695,6 +696,13 @@ a {
                     transition: all 0.3s ease-in-out;
                     width: 80%;
 
+                }
+            }
+
+            &.with-sep {
+
+                a::after {
+                    left: 55%;
                 }
             }
         }
