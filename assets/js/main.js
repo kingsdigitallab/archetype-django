@@ -97,7 +97,7 @@ $(function() {
 
         if (direction === 'up') active_section = active_section.prev();
 
-        var active_link = $('#main-nav-wrap a[href="/#' + active_section.attr("id") + '"]');         
+        var active_link = $('#main-nav-wrap a.smoothscroll[href="/#' + active_section.attr("id") + '"]');         
 
         navigation_links.parent().removeClass('current');
         active_link.parent().addClass('current');
