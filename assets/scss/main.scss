@@ -673,7 +673,8 @@ a {
             }
         }
 
-        &.current {
+        &.current,
+        &.active {
             a {
                 color: $light-blue;
 
@@ -695,6 +696,13 @@ a {
                     transition: all 0.3s ease-in-out;
                     width: 80%;
 
+                }
+            }
+
+            &.with-sep {
+
+                a::after {
+                    left: 55%;
                 }
             }
         }
@@ -1778,7 +1786,8 @@ footer {
 
     #main-nav-wrap {
         display: block;
-        position: absolute;
+        max-height: 100vh;
+        overflow-y: scroll;
         right: 0;
         top: 69px;
         width: 100%;
@@ -1807,7 +1816,8 @@ footer {
         }
 
         li {
-            &.current > a {
+            &.current > a,
+            &.active > a {
                 background: none;
                 color: #ff7b29;
 
