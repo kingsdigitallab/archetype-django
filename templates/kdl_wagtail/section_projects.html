@@ -6,7 +6,7 @@
         {% for item in value.items %}
             <div class="bgrid">   
                 {% image item.image original %}
-                <h3><a href="">{{ item.title }}</a></h3>
+                <h3><a href="{{ item.long_title }}">{{ item.title }}</a></h3>
                 {{ item.body }}
             </div>
         {% endfor %}
