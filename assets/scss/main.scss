@@ -1786,7 +1786,8 @@ footer {
 
     #main-nav-wrap {
         display: block;
-        position: absolute;
+        max-height: 100vh;
+        overflow-y: scroll;
         right: 0;
         top: 69px;
         width: 100%;
@@ -1815,7 +1816,8 @@ footer {
         }
 
         li {
-            &.current > a {
+            &.current > a,
+            &.active > a {
                 background: none;
                 color: #ff7b29;
 
