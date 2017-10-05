@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags kdl_wagtail %}
+
+{% block main %}
+<section id="contact">
+    <div class="row section-intro">
+        <div class="col-twelve with-bottom-line-not">
+            <h5>Sorry, something went wrong on our site</h5>
+            <h1>500 - Server error</h1>
+            <p class="lead">
+                This might be because we are experiencing abnormal traffic 
+                to our network or the service it is on is not currently available.
+                <br>
+                Please try again later once we have solved the problem. 
+                Thank you for your patience.
+                <br>
+                <a href="/">Back to Archetype page</a>
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}
