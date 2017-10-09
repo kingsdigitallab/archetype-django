@@ -6,6 +6,15 @@ register = template.Library()
 
 
 @register.filter()
+def stripblocktags(value):
+    '''Strips all div and p tags from value'''
+    import re
+    if value:
+        return re.sub(r'(?msi)</?\s*(p|div)[^>]*>', r'', '%s' % value)
+    return ''
+
+
+@register.filter()
 def kdl_sugar(value):
     return mark_safe(value.replace('%br%', '<br/>'))
 

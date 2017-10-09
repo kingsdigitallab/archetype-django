@@ -8,7 +8,7 @@
         <div class="col-twelve with-bottom-line">
             <h5>{{ value.title }}</h5>
             <h1>{{ value.long_title }}</h1>
-            <p class="lead">{{ value.body|striptags }}</p>
+            <p class="lead">{{ value.body|stripblocktags|safe }}</p>
         </div>
     </div>
     {% block section-content-parent %}
