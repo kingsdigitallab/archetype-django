@@ -31,7 +31,8 @@
  * 24. ---- Footer
  * 25. ---- Go to top
  * 26. ---- Cookies
- * 27. ---- Media queries
+ * 27. ---- Error pages
+ * 28. ---- Media queries
 */
 
 /* 0. Variables */
@@ -1597,7 +1598,26 @@ footer {
     }
 }
 
-/* 27. Media queries */
+/* 27. Error pages */
+
+#error {
+    background: #fff;
+    padding: 100px 0 30px;
+
+    &.four-o-four {
+        padding-top: 150px;
+    }
+
+    .section-intro {
+        margin-bottom: 0;
+
+        .button {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/* 28. Media queries */
 
 @media only screen and (max-width: 1140px) {
     .download-content {
@@ -1641,13 +1661,13 @@ footer {
 
 // Make sure the menu is visible on larger screens
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 841px) {
     #main-nav-wrap ul.main-navigation {
         display: block !important;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 840px) {
 
     a {
         &.menu-toggle {
@@ -1911,6 +1931,12 @@ footer {
             margin-left: 0;
             margin-right: 0;
             width: 100% !important;
+        }
+    }
+
+    #error {
+        &.four-o-four {
+            padding-top: 100px;
         }
     }
 
