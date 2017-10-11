@@ -1,0 +1,14 @@
+{% load wagtailcore_tags kdl_wagtail %}
+
+{% block main_menu %}
+    <ul class="main-navigation">
+        <li><a class="{% smoothscroll %}" href="/#about" aria-label="About">About</a></li>
+        <li><a class="{% smoothscroll %}" href="/#process" aria-label="Process">Process</a></li>
+        <li><a class="{% smoothscroll %}" href="/#download" aria-label="Download">Download</a></li>
+        <li><a class="{% smoothscroll %}" href="/#projects" aria-label="Projects">Projects</a></li>
+        <li><a class="{% smoothscroll %}" href="/#testimonials" aria-label="Testimonials">Testimonials</a></li>
+        <li><a class="{% smoothscroll %}" href="/#contact" aria-label="Contact">Contact</a></li>
+        <li class="with-sep{% if page.slug == 'case-studies' %} active{% endif %}"><a href="/case-studies" aria-label="Case Studies">Case Studies</a></li>
+        <li{% if page.slug == 'faq' %} class="active"{% endif %}><a href="/faq" aria-label="FAQ">FAQ</a></li>
+    </ul>
+{% endblock %}

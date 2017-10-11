@@ -1,0 +1,17 @@
+{
+    "name": "archetype",
+    "version": "0.1",
+    "dependencies": {
+        "font-awesome": null,
+        "jquery": "1.12.4",
+        "js-cookie": null
+    },
+    "main": "assets/js/main.js",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}

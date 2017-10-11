@@ -1,0 +1,71 @@
+{% load staticfiles compress  %}
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>
+        {% if page.slug != 'home' %}
+            {% block meta_title %}{{ page.title }} |{% endblock %}
+        {% endif %}
+        Archetype
+  </title>
+  <meta name="author" content="King's Digital Lab">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- favicons -->
+  {% include 'includes/favicon.html' %}
+
+  {% compress css %}
+    <link rel="stylesheet" type="text/css" href="{% static "scss/base.css" %}">
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}">
+  {% endcompress %}
+  
+  <!-- script  -->
+  <script src="{% static "js/modernizr.js" %}"></script>
+</head>
+<body id="top"{% if page.slug != 'home' %} class="not-home"{% endif %}>
+  <header>
+    {% include 'includes/header.html' %}
+  </header>
+
+    {% block title %}{% endblock %}
+    
+    {% block main %}
+    {% endblock %}
+
+  <footer>
+    {% block footer %}
+        {% include 'includes/footer.html' %}
+    {% endblock %}
+  </footer>
+  
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+  {% block footer_scripts %}{% endblock %}
+
+  {% compress js %}
+    <!-- jQuery version specified in bower.json -->
+    <script src="{% static 'vendor/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/js-cookie/src/js.cookie.js' %}"></script>
+    <script src="{% static "js/plugins.js" %}"></script>
+    <script src="{% static "js/main.js" %}"></script>
+    
+    {% if GA_ID %}
+      <script src="{% static 'js/google_analytics.js' %}"></script>
+      <script>
+        ga('create', '{{ GA_ID }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+  {% endcompress %}
+</body>
+</html>

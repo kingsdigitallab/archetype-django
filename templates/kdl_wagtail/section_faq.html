@@ -1,0 +1,29 @@
+{% extends "kdl_wagtail/section.html" %}
+{% load wagtailcore_tags kdl_wagtail staticfiles %}
+
+{% block section-items %}
+    <div class="q-and-a block-1-2 block-tab-full group">
+        {% for item in value.items %}
+            <div class="bgrid">
+                <h3>{{ item.title }}</h3>
+                {{ item.body }}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block section-end %}
+    <div class="row additional">
+        <div class="col-twelve">
+            <div class="additional-content">
+                <h2 class="h01"><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Still have a question?</a></h2>
+                <p class="lead">
+                    Get in <a href="/#contact">contact</a> and we will try to to answer it.
+                </p>
+                <div class="action">
+                    <a class="button large" href="/#contact">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

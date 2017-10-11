@@ -1,0 +1,40 @@
+{% extends "kdl_wagtail/section.html" %}
+{% load wagtailcore_tags kdl_wagtail %}
+
+{% block section %}
+<section id="hero">
+    <div class="hero-content">
+        <div class="row">
+            <div class="col-twelve">
+                <h5>{{ value.long_title|kdl_sugar }}</h5>
+                <br>
+                {% comment %}
+                <div class='video-link'>
+                    <a href="#video-popup"><img src="https://www.ifa2017rio.com.br/img/play-button.png" alt=""></a>
+                </div>
+                {% endcomment %}
+                <a class="button smoothscroll" href="#download" title="">Download Now</a>
+                <a class="button smoothscroll" href="#about" title="">Learn More</a>
+                <a class="button smoothscroll" href="#contact" title="">Contact Us</a>
+                {% comment %}
+                  <span class='video-link'>
+                  <a class="button smoothscroll" href="#video-popup" title="">Contact Us</a>       
+                </span>
+                {% endcomment %}
+            </div>
+        </div>
+        <br>
+        <a class="smoothscroll" href="#about" title=""><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+    </div>
+    {% comment %}
+    <!-- Modal Popup -->
+    <!--<div id="video-popup" class="popup-modal mfp-hide">
+        <div class="fluid-video-wrapper">
+            <iframe src="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=faec09" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <a class="close-popup">Close</a>
+    </div>
+    {% endcomment %}
+</section>
+{% endblock %}
+        
