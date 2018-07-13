@@ -2,14 +2,7 @@
 {% load wagtailcore_tags kdl_wagtail forms_builder_tags %} 
 
 {% block section-content %}
-<div class="col-full">
+
+    {% include "kdl_wagtail/section_contact_content.html" %}
     
-    <div class="form">
-        {% render_built_form id=1 %}
-
-        <hr>
-
-        {% include "kdl_wagtail/social_links.html" %}
-    </div>
-</div>
 {% endblock %}

@@ -67,6 +67,7 @@ INSTALLED_APPS = [
 ]
 
 INSTALLED_APPS += [    # your project apps here
+    'captcha',
     'kdl_wagtail',
     'activecollab_digger',
     'kdl_ldap',
@@ -97,6 +98,10 @@ INSTALLED_APPS += [    # your project apps here
 INTERNAL_IPS = ('127.0.0.1', )
 
 FORMS_BUILDER_USE_SITES = False
+FORMS_BUILDER_EXTRA_FIELDS = (
+    (100, "captcha.fields.CaptchaField", "Captcha"),
+)
+CAPTCHA_FONT_SIZE = 36
 
 LOGGING_ROOT = os.path.join(BASE_DIR, 'logs')
 LOGGING_LEVEL = logging.WARN

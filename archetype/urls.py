@@ -26,9 +26,15 @@ urlpatterns = [
     url(r'^tmp/(?P<path>.*)$', view_static_template),
     url(r'^forms/', include(forms_builder.forms.urls)),
 ]
+
+urlpatterns += [
+    url(r'^captcha/', include('captcha.urls')),
+]
+
 urlpatterns += [
     url(r'', include(wagtail_urls)),
 ]
+
 
 # -----------------------------------------------------------------------------
 # Django Debug Toolbar URLS

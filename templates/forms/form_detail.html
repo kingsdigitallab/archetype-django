@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load wagtailcore_tags kdl_wagtail %}
+{% load forms_builder_tags %}
+
+{% block main %}
+
+<section id="contact">
+    <div class="row section-intro">
+        <div class="col-twelve with-bottom-line">
+            <h5>Contact us</h5>
+            <h1>Get in touch</h1>
+        </div>
+    </div>
+    {% block section-content-parent %}
+        <div class="row contact-content">
+            <div class="col-full">
+                <div class="form">
+                    {% render_built_form form %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+    {% block section-end %}
+    {% endblock %}
+</section>
+
+{% endblock %}

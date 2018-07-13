@@ -3,8 +3,7 @@ from django.utils.safestring import mark_safe
 from django.template.loader import render_to_string
 
 register = template.Library()
-
-
+    
 @register.filter()
 def stripblocktags(value):
     '''Strips all div and p tags from value'''
@@ -12,7 +11,6 @@ def stripblocktags(value):
     if value:
         return re.sub(r'(?msi)</?\s*(p|div)[^>]*>', r'', '%s' % value)
     return ''
-
 
 @register.filter()
 def kdl_sugar(value):
