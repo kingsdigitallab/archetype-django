@@ -1,0 +1,12 @@
+{% load wagtailcore_tags kdl_wagtail forms_builder_tags %} 
+
+<div class="col-full">
+    
+    <div class="form">
+        {% render_built_form id=1 %}
+
+        <hr>
+
+        {% include "kdl_wagtail/social_links.html" %}
+    </div>
+</div>
