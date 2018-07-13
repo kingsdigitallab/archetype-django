@@ -12,5 +12,6 @@ elasticsearch>=5.0.0,<6.0.0
 
 django-activecollab-digger
 django-kdl-ldap
-wagtail
+wagtail<1.13
 django-forms-builder
+django-simple-captcha

@@ -1,12 +1,18 @@
-{# <h1>{{ form.title }}</h1> #}
 {% if form.intro %}
-<p>{{ form.intro }}</p>
+    <p>{{ form.intro }}</p>
 {% endif %}
 {{ form_for_form.media }}
 
-<div id="errormessage">{{ form.non_field_errors }}</div>
+{% if form_for_form.errors %}
+<div id="errormessage">
+    {{ form_for_form.non_field_errors }}
+    Some fields do not contain a valid value. 
+    Please correct your inputs and resubmit.
+</div>
+{% endif %}
 
-<form action="{{ form.get_absolute_url }}" method="post" role="form" class="contactForm"
+<form action="{{ form.get_absolute_url }}" method="post"
+    role="form" class="contactForm"
     {% if form_for_form.is_multipart %}enctype="multipart/form-data"{% endif %}>
     {% csrf_token %}
     
@@ -14,23 +20,21 @@
         <div class="form-group">
             <h6>
                 {{ field.label }}
-                {#{ field.label_tag }#}
             </h6>            
-            {{ field }}
 
             {% if field.errors %}
                 <div class="validation">
                     {{ field.errors }}
                 </div>
             {% endif %}
+
+            {{ field }}
             
             {% if field.help_text %}
                 <p class="help">{{ field.help_text|safe }}</p>
             {% endif %}
         </div>
     {% endfor %}
-    
-    {# { form_for_form.as_p } #}
     
     <div style="clear:left;">&nbsp;</div>
 
